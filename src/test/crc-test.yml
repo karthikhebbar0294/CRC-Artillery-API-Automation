@@ -1,0 +1,44 @@
+config:
+  ensure:
+    max: 1000
+  target: "http://10.1.1.76:9000"
+  processor: "../../generic-helper.js"
+  plugins:
+    expect: {}
+    metrics-by-endpoint:
+      useOnlyRequestNames: true
+
+  phases:
+    - duration: 1
+      arrivalRate: 1
+
+scenarios:
+  - name: "Functional Testing"
+    flow:
+
+      - log: "we are started get the service types"
+      - get:
+          url: "/api/service/types"
+          name: "get service types"
+          beforeRequest: "addRequestId"
+          capture:
+            json: "$"
+            as: getServiceTypesResponse
+          expect:
+            - statusCode: 200
+      - log: "this is the data what we have got from the server: {{getServiceTypesResponse}}"
+
+      - log: "we started to verify the address"
+      - post:
+          url: "/api/address/verify"
+          name: "post address verify"
+          beforeRequest: "addJsonDataforAddressVerify"
+          # afterResponse: "updateAddressId"
+          capture:
+            json: "$"
+            as: getAddressVerifyResponse
+          expect:
+            - statusCode: 200
+      - log: "this is the data what we have got from the server: {{getAddressVerifyResponse}}"
+
+
