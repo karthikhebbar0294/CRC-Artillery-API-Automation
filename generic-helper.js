@@ -7,9 +7,9 @@ function addRequestId(req, context, _events, done) {
 }
 
 function addJsonDataforAddressVerify(req, context, _events, done) {
-  req.headers["Content-Type"] = "application/json";
-  req.headers["Content-Length"] = "<calculated when request is sent>";
-  req.headers["Host"] = "<calculated when request is sent>";
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
   req.json = 
     {
       primary_line: "deliverable",
