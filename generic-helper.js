@@ -1,3 +1,11 @@
+// File: generic-helper.js
+// Project: Credit Repair Cloud
+// File Created: Friday, 17-12-2021, 09:30 am
+// Author: Karthik Hebbar A
+// Last Modified: Friday, 17-12-2021, 05:58 pm
+// Modified By: Karthik Hebbar A<karthik.hebbar@altorumleren.com>
+// This script contains the functions and the body for the cloud mail api's
+
 var ids = require("nanoid");
 
 function addRequestId(req, context, _events, done) {
@@ -20,12 +28,161 @@ function addJsonDataforAddressVerify(req, context, _events, done) {
   return done();
 }
 
+function addJsonDataforCreateWallet(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  var registration_id=""+Math.floor(Math.random()*100000);
+  var wallet_type="cloudmail";
+  context.vars["registration_id"]=registration_id;
+  context.vars["wallet_type"]=wallet_type;
+  req.json = 
+      {
+        registration_id: context.vars.registration_id,
+        wallet_type: context.vars.wallet_type
+      };
+  return done();
+}
+
+function addJsonDataforCreateWalletNegativeTest1(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  var wallet_type="cloudmail";
+  context.vars["wallet_type"]=wallet_type;
+  req.json = 
+      {
+        registration_id: context.vars.registration_id,
+        wallet_type: context.vars.wallet_type
+      };
+  return done();
+}
+
+function addJsonDataforCreateWalletNegativeTest2(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  var registration_id="TestingwithAlphabet";
+  var wallet_type="cloudmail";
+  context.vars["registration_id"]=registration_id;
+  context.vars["wallet_type"]=wallet_type;
+  req.json = 
+      {
+        registration_id: context.vars.registration_id,
+        wallet_type: context.vars.wallet_type
+      };
+  return done();
+}
+
+function addJsonDataforCreateWalletNegativeTest3(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  var registration_id="Testingwith123";
+  var wallet_type="cloudmail";
+  context.vars["registration_id"]=registration_id;
+  context.vars["wallet_type"]=wallet_type;
+  req.json = 
+      {
+        registration_id: context.vars.registration_id,
+        wallet_type: context.vars.wallet_type
+      };
+  return done();
+}
+
+function addJsonDataforCreateWalletNegativeTest4(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  var registration_id=""+Math.floor(Math.random()*100000);
+  var wallet_type="cloudmailapi";
+  context.vars["registration_id"]=registration_id;
+  context.vars["wallet_type"]=wallet_type;
+  req.json = 
+      {
+        registration_id: context.vars.registration_id,
+        wallet_type: context.vars.wallet_type
+      };
+  return done();
+}
+
+function addJsonDataforCreateWalletNegativeTest5(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  var registration_id=""+Math.floor(Math.random()*100000);
+  var wallet_type="12345678";
+  context.vars["registration_id"]=registration_id;
+  context.vars["wallet_type"]=wallet_type;
+  req.json = 
+      {
+        registration_id: context.vars.registration_id,
+        wallet_type: context.vars.wallet_type
+      };
+  return done();
+}
+
+function addJsonDataforCreateWalletNegativeTest6(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  var registration_id=""+Math.floor(Math.random()*100000);
+  var wallet_type="12.12345678";
+  context.vars["registration_id"]=registration_id;
+  context.vars["wallet_type"]=wallet_type;
+  req.json = 
+      {
+        registration_id: context.vars.registration_id,
+        wallet_type: context.vars.wallet_type
+      };
+  return done();
+}
+
+function addJsonDataforCreateWalletNegativeTest7(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  var registration_id="InvalidId";
+  var wallet_type="Invalid12.12345678";
+  context.vars["registration_id"]=registration_id;
+  context.vars["wallet_type"]=wallet_type;
+  req.json = 
+      {
+        registration_id: context.vars.registration_id,
+        wallet_type: context.vars.wallet_type
+      };
+  return done();
+}
+
 // function updateAddressId(request, response, context, ee, next) {
 //   var address_id = response.body["_id"];
 //   context.vars["addressid"] = address_id;
 //   return next();
 // }
 
+function addJsonDataforUpdateBalance(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  req.json = 
+    {
+        registration_id : "201368",
+        wallet_type: "cloudmail",
+        amount: "50",
+        // transaction_refrence_id: ""
+    };
+  return done();
+}
+
 exports.addRequestId=addRequestId;
 exports.addJsonDataforAddressVerify=addJsonDataforAddressVerify;
+exports.addJsonDataforCreateWallet=addJsonDataforCreateWallet;
+exports.addJsonDataforUpdateBalance=addJsonDataforUpdateBalance;
+exports.addJsonDataforCreateWalletNegativeTest1=addJsonDataforCreateWalletNegativeTest1;
+exports.addJsonDataforCreateWalletNegativeTest2=addJsonDataforCreateWalletNegativeTest2;
+exports.addJsonDataforCreateWalletNegativeTest3=addJsonDataforCreateWalletNegativeTest3;
+exports.addJsonDataforCreateWalletNegativeTest4=addJsonDataforCreateWalletNegativeTest4;
+exports.addJsonDataforCreateWalletNegativeTest5=addJsonDataforCreateWalletNegativeTest5;
+exports.addJsonDataforCreateWalletNegativeTest6=addJsonDataforCreateWalletNegativeTest6;
+exports.addJsonDataforCreateWalletNegativeTest7=addJsonDataforCreateWalletNegativeTest7;
 // exports.updateAddressId=updateAddressId;

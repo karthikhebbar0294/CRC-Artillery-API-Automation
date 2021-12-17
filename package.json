@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "artillery run -o report.json src/test/crc-test.yml; artillery report report.json"
+    "test": "artillery run -o report.json src/test/crc-negative-test.yml; artillery report report.json"
   },
   "keywords": [],
   "author": "",

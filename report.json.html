@@ -49,55 +49,194 @@
   <script>
   window.Report = {
   "aggregate": {
-    "timestamp": "2021-12-14T11:24:39.153Z",
+    "timestamp": "2021-12-17T11:30:17.468Z",
     "scenariosCreated": 1,
     "scenariosCompleted": 1,
-    "requestsCompleted": 2,
+    "requestsCompleted": 19,
     "latency": {
-      "min": 369,
-      "max": 697,
-      "median": 533,
-      "p95": 697,
-      "p99": 697
+      "min": 250,
+      "max": 883,
+      "median": 314,
+      "p95": 659.4,
+      "p99": 883
     },
     "rps": {
-      "count": 2,
-      "mean": 1.32
+      "count": 19,
+      "mean": 2.7
     },
     "scenarioDuration": {
-      "min": 1376.2,
-      "max": 1376.2,
-      "median": 1376.2,
-      "p95": 1376.2,
-      "p99": 1376.2
+      "min": 6959.5,
+      "max": 6959.5,
+      "median": 6959.5,
+      "p95": 6959.5,
+      "p99": 6959.5
     },
     "scenarioCounts": {
       "Functional Testing": 1
     },
     "errors": {},
     "codes": {
-      "200": 2
+      "200": 2,
+      "201": 1,
+      "404": 5,
+      "422": 11
     },
     "matches": 0,
     "customStats": {
-      "get service types": {
-        "min": 664,
-        "max": 664,
-        "median": 664,
-        "p95": 664,
-        "p99": 664
+      "Create Wallet": {
+        "min": 509,
+        "max": 509,
+        "median": 509,
+        "p95": 509,
+        "p99": 509
       },
-      "post address verify": {
-        "min": 705,
-        "max": 705,
-        "median": 705,
-        "p95": 705,
-        "p99": 705
+      "Create Wallet with same registration number": {
+        "min": 397,
+        "max": 397,
+        "median": 397,
+        "p95": 397,
+        "p99": 397
+      },
+      "Create Wallet Registration Id as alphabets": {
+        "min": 342,
+        "max": 342,
+        "median": 342,
+        "p95": 342,
+        "p99": 342
+      },
+      "Create Wallet with Registration Id as alpha numeric": {
+        "min": 318,
+        "max": 318,
+        "median": 318,
+        "p95": 318,
+        "p99": 318
+      },
+      "Create Wallet with invalid wallet type": {
+        "min": 339,
+        "max": 339,
+        "median": 339,
+        "p95": 339,
+        "p99": 339
+      },
+      "Create Wallet with integer wallet type": {
+        "min": 892,
+        "max": 892,
+        "median": 892,
+        "p95": 892,
+        "p99": 892
+      },
+      "Create Wallet with integer and float wallet type": {
+        "min": 323,
+        "max": 323,
+        "median": 323,
+        "p95": 323,
+        "p99": 323
+      },
+      "Create Wallet with invalid registration id and wallet type": {
+        "min": 328,
+        "max": 328,
+        "median": 328,
+        "p95": 328,
+        "p99": 328
+      },
+      "Create Wallet with invalid url 1": {
+        "min": 315,
+        "max": 315,
+        "median": 315,
+        "p95": 315,
+        "p99": 315
+      },
+      "Create Wallet with invalid url 2": {
+        "min": 315,
+        "max": 315,
+        "median": 315,
+        "p95": 315,
+        "p99": 315
+      },
+      "Get Balance": {
+        "min": 321,
+        "max": 321,
+        "median": 321,
+        "p95": 321,
+        "p99": 321
+      },
+      "Get Balance without registration Id": {
+        "min": 313,
+        "max": 313,
+        "median": 313,
+        "p95": 313,
+        "p99": 313
+      },
+      "Get Balance without wallet type": {
+        "min": 320,
+        "max": 320,
+        "median": 320,
+        "p95": 320,
+        "p99": 320
+      },
+      "Get Balance without registration Id and wallet Type": {
+        "min": 320,
+        "max": 320,
+        "median": 320,
+        "p95": 320,
+        "p99": 320
+      },
+      "Get Balance with invalid url 1": {
+        "min": 317,
+        "max": 317,
+        "median": 317,
+        "p95": 317,
+        "p99": 317
+      },
+      "Get Balance with invalid url 2": {
+        "min": 313,
+        "max": 313,
+        "median": 313,
+        "p95": 313,
+        "p99": 313
+      },
+      "Get All Wallets": {
+        "min": 324,
+        "max": 324,
+        "median": 324,
+        "p95": 324,
+        "p99": 324
+      },
+      "Get All Wallets without registration Id": {
+        "min": 313,
+        "max": 313,
+        "median": 313,
+        "p95": 313,
+        "p99": 313
+      },
+      "Get All Wallets with invalid url": {
+        "min": 313,
+        "max": 313,
+        "median": 313,
+        "p95": 313,
+        "p99": 313
       }
     },
     "counters": {
-      "code 200 on get service types": 1,
-      "code 200 on post address verify": 1
+      "code 201 on Create Wallet": 1,
+      "code 422 on Create Wallet with same registration number": 1,
+      "code 422 on Create Wallet Registration Id as alphabets": 1,
+      "code 422 on Create Wallet with Registration Id as alpha numeric": 1,
+      "code 422 on Create Wallet with invalid wallet type": 1,
+      "code 422 on Create Wallet with integer wallet type": 1,
+      "code 422 on Create Wallet with integer and float wallet type": 1,
+      "code 422 on Create Wallet with invalid registration id and wallet type": 1,
+      "code 404 on Create Wallet with invalid url 1": 1,
+      "code 404 on Create Wallet with invalid url 2": 1,
+      "code 200 on Get Balance": 1,
+      "code 422 on Get Balance without registration Id": 1,
+      "code 422 on Get Balance without wallet type": 1,
+      "code 422 on Get Balance without registration Id and wallet Type": 1,
+      "code 404 on Get Balance with invalid url 1": 1,
+      "code 404 on Get Balance with invalid url 2": 1,
+      "code 200 on Get All Wallets": 1,
+      "code 422 on Get All Wallets without registration Id": 1,
+      "code 404 on Get All Wallets with invalid url": 1
     },
     "scenariosAvoided": 0,
     "phases": [
@@ -109,55 +248,194 @@
   },
   "intermediate": [
     {
-      "timestamp": "2021-12-14T11:24:39.149Z",
+      "timestamp": "2021-12-17T11:30:17.451Z",
       "scenariosCreated": 1,
       "scenariosCompleted": 1,
-      "requestsCompleted": 2,
+      "requestsCompleted": 19,
       "latency": {
-        "min": 369,
-        "max": 697,
-        "median": 533,
-        "p95": 697,
-        "p99": 697
+        "min": 250,
+        "max": 883,
+        "median": 314,
+        "p95": 659.4,
+        "p99": 883
       },
       "rps": {
-        "count": 2,
-        "mean": 1.33
+        "count": 19,
+        "mean": 2.7
       },
       "scenarioDuration": {
-        "min": 1376.2,
-        "max": 1376.2,
-        "median": 1376.2,
-        "p95": 1376.2,
-        "p99": 1376.2
+        "min": 6959.5,
+        "max": 6959.5,
+        "median": 6959.5,
+        "p95": 6959.5,
+        "p99": 6959.5
       },
       "scenarioCounts": {
         "Functional Testing": 1
       },
       "errors": {},
       "codes": {
-        "200": 2
+        "200": 2,
+        "201": 1,
+        "404": 5,
+        "422": 11
       },
       "matches": 0,
       "customStats": {
-        "get service types": {
-          "min": 664,
-          "max": 664,
-          "median": 664,
-          "p95": 664,
-          "p99": 664
+        "Create Wallet": {
+          "min": 509,
+          "max": 509,
+          "median": 509,
+          "p95": 509,
+          "p99": 509
         },
-        "post address verify": {
-          "min": 705,
-          "max": 705,
-          "median": 705,
-          "p95": 705,
-          "p99": 705
+        "Create Wallet with same registration number": {
+          "min": 397,
+          "max": 397,
+          "median": 397,
+          "p95": 397,
+          "p99": 397
+        },
+        "Create Wallet Registration Id as alphabets": {
+          "min": 342,
+          "max": 342,
+          "median": 342,
+          "p95": 342,
+          "p99": 342
+        },
+        "Create Wallet with Registration Id as alpha numeric": {
+          "min": 318,
+          "max": 318,
+          "median": 318,
+          "p95": 318,
+          "p99": 318
+        },
+        "Create Wallet with invalid wallet type": {
+          "min": 339,
+          "max": 339,
+          "median": 339,
+          "p95": 339,
+          "p99": 339
+        },
+        "Create Wallet with integer wallet type": {
+          "min": 892,
+          "max": 892,
+          "median": 892,
+          "p95": 892,
+          "p99": 892
+        },
+        "Create Wallet with integer and float wallet type": {
+          "min": 323,
+          "max": 323,
+          "median": 323,
+          "p95": 323,
+          "p99": 323
+        },
+        "Create Wallet with invalid registration id and wallet type": {
+          "min": 328,
+          "max": 328,
+          "median": 328,
+          "p95": 328,
+          "p99": 328
+        },
+        "Create Wallet with invalid url 1": {
+          "min": 315,
+          "max": 315,
+          "median": 315,
+          "p95": 315,
+          "p99": 315
+        },
+        "Create Wallet with invalid url 2": {
+          "min": 315,
+          "max": 315,
+          "median": 315,
+          "p95": 315,
+          "p99": 315
+        },
+        "Get Balance": {
+          "min": 321,
+          "max": 321,
+          "median": 321,
+          "p95": 321,
+          "p99": 321
+        },
+        "Get Balance without registration Id": {
+          "min": 313,
+          "max": 313,
+          "median": 313,
+          "p95": 313,
+          "p99": 313
+        },
+        "Get Balance without wallet type": {
+          "min": 320,
+          "max": 320,
+          "median": 320,
+          "p95": 320,
+          "p99": 320
+        },
+        "Get Balance without registration Id and wallet Type": {
+          "min": 320,
+          "max": 320,
+          "median": 320,
+          "p95": 320,
+          "p99": 320
+        },
+        "Get Balance with invalid url 1": {
+          "min": 317,
+          "max": 317,
+          "median": 317,
+          "p95": 317,
+          "p99": 317
+        },
+        "Get Balance with invalid url 2": {
+          "min": 313,
+          "max": 313,
+          "median": 313,
+          "p95": 313,
+          "p99": 313
+        },
+        "Get All Wallets": {
+          "min": 324,
+          "max": 324,
+          "median": 324,
+          "p95": 324,
+          "p99": 324
+        },
+        "Get All Wallets without registration Id": {
+          "min": 313,
+          "max": 313,
+          "median": 313,
+          "p95": 313,
+          "p99": 313
+        },
+        "Get All Wallets with invalid url": {
+          "min": 313,
+          "max": 313,
+          "median": 313,
+          "p95": 313,
+          "p99": 313
         }
       },
       "counters": {
-        "code 200 on get service types": 1,
-        "code 200 on post address verify": 1
+        "code 201 on Create Wallet": 1,
+        "code 422 on Create Wallet with same registration number": 1,
+        "code 422 on Create Wallet Registration Id as alphabets": 1,
+        "code 422 on Create Wallet with Registration Id as alpha numeric": 1,
+        "code 422 on Create Wallet with invalid wallet type": 1,
+        "code 422 on Create Wallet with integer wallet type": 1,
+        "code 422 on Create Wallet with integer and float wallet type": 1,
+        "code 422 on Create Wallet with invalid registration id and wallet type": 1,
+        "code 404 on Create Wallet with invalid url 1": 1,
+        "code 404 on Create Wallet with invalid url 2": 1,
+        "code 200 on Get Balance": 1,
+        "code 422 on Get Balance without registration Id": 1,
+        "code 422 on Get Balance without wallet type": 1,
+        "code 422 on Get Balance without registration Id and wallet Type": 1,
+        "code 404 on Get Balance with invalid url 1": 1,
+        "code 404 on Get Balance with invalid url 2": 1,
+        "code 200 on Get All Wallets": 1,
+        "code 422 on Get All Wallets without registration Id": 1,
+        "code 404 on Get All Wallets with invalid url": 1
       },
       "concurrency": 0,
       "pendingRequests": 0,
@@ -306,17 +584,17 @@
   
     
     <div class="row">
-      <div class="id_9572 text-center col-lg-12"></div>
+      <div class="id_1688 text-center col-lg-12"></div>
       <script>
-      var histogramData = _.map(Report.aggregate.customStats['get service types'], function(v, k) { return {bin: k, value: v} });
+      var histogramData = _.map(Report.aggregate.customStats['Create Wallet'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
         chart_type: 'bar',
         x_label: 'Percentile',
         y_label: '(ms)',
         animate_on_load: true,
-        title: 'get service types distribution',
-        description: 'Distribution of get service types',
-        target: '.id_9572',
+        title: 'Create Wallet distribution',
+        description: 'Distribution of Create Wallet',
+        target: '.id_1688',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -332,17 +610,459 @@
   
     
     <div class="row">
-      <div class="id_1908 text-center col-lg-12"></div>
+      <div class="id_4850 text-center col-lg-12"></div>
       <script>
-      var histogramData = _.map(Report.aggregate.customStats['post address verify'], function(v, k) { return {bin: k, value: v} });
+      var histogramData = _.map(Report.aggregate.customStats['Create Wallet with same registration number'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
         chart_type: 'bar',
         x_label: 'Percentile',
         y_label: '(ms)',
         animate_on_load: true,
-        title: 'post address verify distribution',
-        description: 'Distribution of post address verify',
-        target: '.id_1908',
+        title: 'Create Wallet with same registration number distribution',
+        description: 'Distribution of Create Wallet with same registration number',
+        target: '.id_4850',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_1312 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Create Wallet Registration Id as alphabets'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Create Wallet Registration Id as alphabets distribution',
+        description: 'Distribution of Create Wallet Registration Id as alphabets',
+        target: '.id_1312',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_4734 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Create Wallet with Registration Id as alpha numeric'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Create Wallet with Registration Id as alpha numeric distribution',
+        description: 'Distribution of Create Wallet with Registration Id as alpha numeric',
+        target: '.id_4734',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_6104 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Create Wallet with invalid wallet type'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Create Wallet with invalid wallet type distribution',
+        description: 'Distribution of Create Wallet with invalid wallet type',
+        target: '.id_6104',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_1783 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Create Wallet with integer wallet type'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Create Wallet with integer wallet type distribution',
+        description: 'Distribution of Create Wallet with integer wallet type',
+        target: '.id_1783',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_1636 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Create Wallet with integer and float wallet type'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Create Wallet with integer and float wallet type distribution',
+        description: 'Distribution of Create Wallet with integer and float wallet type',
+        target: '.id_1636',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_2822 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Create Wallet with invalid registration id and wallet type'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Create Wallet with invalid registration id and wallet type distribution',
+        description: 'Distribution of Create Wallet with invalid registration id and wallet type',
+        target: '.id_2822',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_8067 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Create Wallet with invalid url 1'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Create Wallet with invalid url 1 distribution',
+        description: 'Distribution of Create Wallet with invalid url 1',
+        target: '.id_8067',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_1326 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Create Wallet with invalid url 2'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Create Wallet with invalid url 2 distribution',
+        description: 'Distribution of Create Wallet with invalid url 2',
+        target: '.id_1326',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_6123 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Get Balance'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Get Balance distribution',
+        description: 'Distribution of Get Balance',
+        target: '.id_6123',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_4976 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Get Balance without registration Id'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Get Balance without registration Id distribution',
+        description: 'Distribution of Get Balance without registration Id',
+        target: '.id_4976',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_645 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Get Balance without wallet type'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Get Balance without wallet type distribution',
+        description: 'Distribution of Get Balance without wallet type',
+        target: '.id_645',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_7000 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Get Balance without registration Id and wallet Type'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Get Balance without registration Id and wallet Type distribution',
+        description: 'Distribution of Get Balance without registration Id and wallet Type',
+        target: '.id_7000',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_9964 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Get Balance with invalid url 1'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Get Balance with invalid url 1 distribution',
+        description: 'Distribution of Get Balance with invalid url 1',
+        target: '.id_9964',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_5162 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Get Balance with invalid url 2'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Get Balance with invalid url 2 distribution',
+        description: 'Distribution of Get Balance with invalid url 2',
+        target: '.id_5162',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_6079 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Get All Wallets'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Get All Wallets distribution',
+        description: 'Distribution of Get All Wallets',
+        target: '.id_6079',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_6245 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Get All Wallets without registration Id'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Get All Wallets without registration Id distribution',
+        description: 'Distribution of Get All Wallets without registration Id',
+        target: '.id_6245',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_9143 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Get All Wallets with invalid url'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Get All Wallets with invalid url distribution',
+        description: 'Distribution of Get All Wallets with invalid url',
+        target: '.id_9143',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
