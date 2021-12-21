@@ -162,6 +162,110 @@ scenarios:
             - statusCode: 404
       - log: "this is the data what we have got from the server: {{postCreateWalletResponseNegativeTest9}}"
 
+      - log: "we started to update balance"
+      - post:
+          url: "/api/wallet/recharge"
+          name: "Update Balance"
+          beforeRequest: "addJsonDataforUpdateBalance"
+          # afterResponse: "updateAddressId"
+          capture:
+            json: "$"
+            as: postUpdateBalanceResponse
+          expect:
+            - statusCode: 200
+      - log: "this is the data what we have got from the server: {{postUpdateBalanceResponse}}"
+
+      - log: "we started to update balance with a amount equals to zero"
+      - post:
+          url: "/api/wallet/recharge"
+          name: "Update Balance with a amount equals to zero"
+          beforeRequest: "addJsonDataforUpdateBalanceNegativeTest1"
+          # afterResponse: "updateAddressId"
+          capture:
+            json: "$"
+            as: postUpdateBalanceResponseNegativeTest1
+          expect:
+            - statusCode: 422
+      - log: "this is the data what we have got from the server: {{postUpdateBalanceResponseNegativeTest1}}"
+
+      - log: "we started to update balance with alpha-numeric characters in amount field"
+      - post:
+          url: "/api/wallet/recharge"
+          name: "Update Balance with alpha-numeric characters in amount field"
+          beforeRequest: "addJsonDataforUpdateBalanceNegativeTest2"
+          # afterResponse: "updateAddressId"
+          capture:
+            json: "$"
+            as: postUpdateBalanceResponseNegativeTest2
+          expect:
+            - statusCode: 422
+      - log: "this is the data what we have got from the server: {{postUpdateBalanceResponseNegativeTest2}}"
+
+      - log: "we started to update balance without registration id"
+      - post:
+          url: "/api/wallet/recharge"
+          name: "Update Balance without registration id"
+          beforeRequest: "addJsonDataforUpdateBalanceNegativeTest3"
+          # afterResponse: "updateAddressId"
+          capture:
+            json: "$"
+            as: postUpdateBalanceResponseNegativeTest3
+          expect:
+            - statusCode: 422
+      - log: "this is the data what we have got from the server: {{postUpdateBalanceResponseNegativeTest3}}"
+
+      - log: "we started to update balance without wallet type"
+      - post:
+          url: "/api/wallet/recharge"
+          name: "Update Balance without wallet type"
+          beforeRequest: "addJsonDataforUpdateBalanceNegativeTest4"
+          # afterResponse: "updateAddressId"
+          capture:
+            json: "$"
+            as: postUpdateBalanceResponseNegativeTest4
+          expect:
+            - statusCode: 422
+      - log: "this is the data what we have got from the server: {{postUpdateBalanceResponseNegativeTest4}}"
+
+      - log: "we started to update balance without registration id and wallet type"
+      - post:
+          url: "/api/wallet/recharge"
+          name: "Update Balance without registration id and wallet type"
+          beforeRequest: "addJsonDataforUpdateBalanceNegativeTest5"
+          # afterResponse: "updateAddressId"
+          capture:
+            json: "$"
+            as: postUpdateBalanceResponseNegativeTest5
+          expect:
+            - statusCode: 422
+      - log: "this is the data what we have got from the server: {{postUpdateBalanceResponseNegativeTest5}}"
+
+      - log: "we started to update balance without registration id and wallet type and invalid amount"
+      - post:
+          url: "/api/wallet/recharge"
+          name: "Update Balance without registration id and wallet type and invalid amount"
+          beforeRequest: "addJsonDataforUpdateBalanceNegativeTest6"
+          # afterResponse: "updateAddressId"
+          capture:
+            json: "$"
+            as: postUpdateBalanceResponseNegativeTest6
+          expect:
+            - statusCode: 422
+            - contentType: json
+            - hasProperty: message.registration_id
+            - hasProperty: message.wallet_type
+            - hasProperty: message.amount
+            - equals:
+              - "{{ postUpdateBalanceResponseNegativeTest6.message.registration_id }}"
+              - "The registration id field is required."
+            - equals: 
+              - "{{ postUpdateBalanceResponseNegativeTest6.message.wallet_type }}"
+              - "The wallet type field is required."
+            - equals:
+              - "{{ postUpdateBalanceResponseNegativeTest6.message.amount }}"
+              - "The amount must be a number."
+      - log: "this is the data what we have got from the server: {{postUpdateBalanceResponseNegativeTest6}}"
+
       - log: "we started to get the balance"
       - get:
           url: "/api/wallet/balance/{{registration_id}}/{{wallet_type}}"
@@ -278,3 +382,42 @@ scenarios:
           expect:
             - statusCode: 404
       - log: "this is the data what we have got from the server: {{getAllWalletResponseNegativeTest2}}"
+
+      - log: "we started to verify the address"
+      - post:
+          url: "/api/address/verify"
+          name: "Verify Address"
+          beforeRequest: "addJsonDataforAddressVerify"
+          # afterResponse: "updateAddressId"
+          capture:
+            json: "$"
+            as: postAddressVerifyResponse
+          expect:
+            - statusCode: 200
+      - log: "this is the data what we have got from the server: {{postAddressVerifyResponse}}"
+
+      - log: "we started to verify the address"
+      - post:
+          url: "/api/address/verify"
+          name: "Verify Address"
+          beforeRequest: "addJsonDataforAddressVerifyNegativeTest1"
+          # afterResponse: "updateAddressId"
+          capture:
+            json: "$"
+            as: postAddressVerifyResponseNegativeTest1
+          expect:
+            - statusCode: 422
+      - log: "this is the data what we have got from the server: {{postAddressVerifyResponseNegativeTest1}}"
+
+      - log: "we started to verify the address with invalid url"
+      - post:
+          url: "/api/addressverify"
+          name: "Verify Address"
+          # beforeRequest: "addJsonDataforAddressVerifyNegativeTest1"
+          # afterResponse: "updateAddressId"
+          capture:
+            json: "$"
+            as: postAddressVerifyResponse
+          expect:
+            - statusCode: 404
+      - log: "this is the data what we have got from the server: {{postAddressVerifyResponse}}"

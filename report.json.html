@@ -49,172 +49,228 @@
   <script>
   window.Report = {
   "aggregate": {
-    "timestamp": "2021-12-17T11:30:17.468Z",
+    "timestamp": "2021-12-21T12:13:17.770Z",
     "scenariosCreated": 1,
     "scenariosCompleted": 1,
-    "requestsCompleted": 19,
+    "requestsCompleted": 29,
     "latency": {
-      "min": 250,
-      "max": 883,
-      "median": 314,
-      "p95": 659.4,
-      "p99": 883
+      "min": 293,
+      "max": 1001,
+      "median": 380,
+      "p95": 843.3,
+      "p99": 1001
     },
     "rps": {
-      "count": 19,
-      "mean": 2.7
+      "count": 29,
+      "mean": 2.14
     },
     "scenarioDuration": {
-      "min": 6959.5,
-      "max": 6959.5,
-      "median": 6959.5,
-      "p95": 6959.5,
-      "p99": 6959.5
+      "min": 13508.4,
+      "max": 13508.4,
+      "median": 13508.4,
+      "p95": 13508.4,
+      "p99": 13508.4
     },
     "scenarioCounts": {
       "Functional Testing": 1
     },
     "errors": {},
     "codes": {
-      "200": 2,
+      "200": 4,
       "201": 1,
-      "404": 5,
-      "422": 11
+      "404": 6,
+      "422": 18
     },
     "matches": 0,
     "customStats": {
       "Create Wallet": {
-        "min": 509,
-        "max": 509,
-        "median": 509,
-        "p95": 509,
-        "p99": 509
+        "min": 584,
+        "max": 584,
+        "median": 584,
+        "p95": 584,
+        "p99": 584
       },
       "Create Wallet with same registration number": {
-        "min": 397,
-        "max": 397,
-        "median": 397,
-        "p95": 397,
-        "p99": 397
+        "min": 387,
+        "max": 387,
+        "median": 387,
+        "p95": 387,
+        "p99": 387
       },
       "Create Wallet Registration Id as alphabets": {
-        "min": 342,
-        "max": 342,
-        "median": 342,
-        "p95": 342,
-        "p99": 342
+        "min": 357,
+        "max": 357,
+        "median": 357,
+        "p95": 357,
+        "p99": 357
       },
       "Create Wallet with Registration Id as alpha numeric": {
-        "min": 318,
-        "max": 318,
-        "median": 318,
-        "p95": 318,
-        "p99": 318
+        "min": 456,
+        "max": 456,
+        "median": 456,
+        "p95": 456,
+        "p99": 456
       },
       "Create Wallet with invalid wallet type": {
-        "min": 339,
-        "max": 339,
-        "median": 339,
-        "p95": 339,
-        "p99": 339
+        "min": 839,
+        "max": 839,
+        "median": 839,
+        "p95": 839,
+        "p99": 839
       },
       "Create Wallet with integer wallet type": {
-        "min": 892,
-        "max": 892,
-        "median": 892,
-        "p95": 892,
-        "p99": 892
+        "min": 426,
+        "max": 426,
+        "median": 426,
+        "p95": 426,
+        "p99": 426
       },
       "Create Wallet with integer and float wallet type": {
-        "min": 323,
-        "max": 323,
-        "median": 323,
-        "p95": 323,
-        "p99": 323
+        "min": 599,
+        "max": 599,
+        "median": 599,
+        "p95": 599,
+        "p99": 599
       },
       "Create Wallet with invalid registration id and wallet type": {
-        "min": 328,
-        "max": 328,
-        "median": 328,
-        "p95": 328,
-        "p99": 328
+        "min": 615,
+        "max": 615,
+        "median": 615,
+        "p95": 615,
+        "p99": 615
       },
       "Create Wallet with invalid url 1": {
-        "min": 315,
-        "max": 315,
-        "median": 315,
-        "p95": 315,
-        "p99": 315
+        "min": 346,
+        "max": 346,
+        "median": 346,
+        "p95": 346,
+        "p99": 346
       },
       "Create Wallet with invalid url 2": {
-        "min": 315,
-        "max": 315,
-        "median": 315,
-        "p95": 315,
-        "p99": 315
+        "min": 348,
+        "max": 348,
+        "median": 348,
+        "p95": 348,
+        "p99": 348
+      },
+      "Update Balance": {
+        "min": 356,
+        "max": 356,
+        "median": 356,
+        "p95": 356,
+        "p99": 356
+      },
+      "Update Balance with a amount equals to zero": {
+        "min": 347,
+        "max": 347,
+        "median": 347,
+        "p95": 347,
+        "p99": 347
+      },
+      "Update Balance with alpha-numeric characters in amount field": {
+        "min": 370,
+        "max": 370,
+        "median": 370,
+        "p95": 370,
+        "p99": 370
+      },
+      "Update Balance without registration id": {
+        "min": 344,
+        "max": 344,
+        "median": 344,
+        "p95": 344,
+        "p99": 344
+      },
+      "Update Balance without wallet type": {
+        "min": 373,
+        "max": 373,
+        "median": 373,
+        "p95": 373,
+        "p99": 373
+      },
+      "Update Balance without registration id and wallet type": {
+        "min": 371,
+        "max": 371,
+        "median": 371,
+        "p95": 371,
+        "p99": 371
+      },
+      "Update Balance without registration id and wallet type and invalid amount": {
+        "min": 362,
+        "max": 362,
+        "median": 362,
+        "p95": 362,
+        "p99": 362
       },
       "Get Balance": {
-        "min": 321,
-        "max": 321,
-        "median": 321,
-        "p95": 321,
-        "p99": 321
+        "min": 344,
+        "max": 344,
+        "median": 344,
+        "p95": 344,
+        "p99": 344
       },
       "Get Balance without registration Id": {
-        "min": 313,
-        "max": 313,
-        "median": 313,
-        "p95": 313,
-        "p99": 313
+        "min": 398,
+        "max": 398,
+        "median": 398,
+        "p95": 398,
+        "p99": 398
       },
       "Get Balance without wallet type": {
-        "min": 320,
-        "max": 320,
-        "median": 320,
-        "p95": 320,
-        "p99": 320
+        "min": 391,
+        "max": 391,
+        "median": 391,
+        "p95": 391,
+        "p99": 391
       },
       "Get Balance without registration Id and wallet Type": {
-        "min": 320,
-        "max": 320,
-        "median": 320,
-        "p95": 320,
-        "p99": 320
+        "min": 533,
+        "max": 533,
+        "median": 533,
+        "p95": 533,
+        "p99": 533
       },
       "Get Balance with invalid url 1": {
-        "min": 317,
-        "max": 317,
-        "median": 317,
-        "p95": 317,
-        "p99": 317
+        "min": 711,
+        "max": 711,
+        "median": 711,
+        "p95": 711,
+        "p99": 711
       },
       "Get Balance with invalid url 2": {
-        "min": 313,
-        "max": 313,
-        "median": 313,
-        "p95": 313,
-        "p99": 313
+        "min": 377,
+        "max": 377,
+        "median": 377,
+        "p95": 377,
+        "p99": 377
       },
       "Get All Wallets": {
-        "min": 324,
-        "max": 324,
-        "median": 324,
-        "p95": 324,
-        "p99": 324
+        "min": 393,
+        "max": 393,
+        "median": 393,
+        "p95": 393,
+        "p99": 393
       },
       "Get All Wallets without registration Id": {
-        "min": 313,
-        "max": 313,
-        "median": 313,
-        "p95": 313,
-        "p99": 313
+        "min": 374,
+        "max": 374,
+        "median": 374,
+        "p95": 374,
+        "p99": 374
       },
       "Get All Wallets with invalid url": {
-        "min": 313,
-        "max": 313,
-        "median": 313,
-        "p95": 313,
-        "p99": 313
+        "min": 387,
+        "max": 387,
+        "median": 387,
+        "p95": 387,
+        "p99": 387
+      },
+      "Verify Address": {
+        "min": 421,
+        "max": 1007,
+        "median": 654,
+        "p95": 1007,
+        "p99": 1007
       }
     },
     "counters": {
@@ -228,6 +284,13 @@
       "code 422 on Create Wallet with invalid registration id and wallet type": 1,
       "code 404 on Create Wallet with invalid url 1": 1,
       "code 404 on Create Wallet with invalid url 2": 1,
+      "code 200 on Update Balance": 1,
+      "code 422 on Update Balance with a amount equals to zero": 1,
+      "code 422 on Update Balance with alpha-numeric characters in amount field": 1,
+      "code 422 on Update Balance without registration id": 1,
+      "code 422 on Update Balance without wallet type": 1,
+      "code 422 on Update Balance without registration id and wallet type": 1,
+      "code 422 on Update Balance without registration id and wallet type and invalid amount": 1,
       "code 200 on Get Balance": 1,
       "code 422 on Get Balance without registration Id": 1,
       "code 422 on Get Balance without wallet type": 1,
@@ -236,7 +299,10 @@
       "code 404 on Get Balance with invalid url 2": 1,
       "code 200 on Get All Wallets": 1,
       "code 422 on Get All Wallets without registration Id": 1,
-      "code 404 on Get All Wallets with invalid url": 1
+      "code 404 on Get All Wallets with invalid url": 1,
+      "code 200 on Verify Address": 1,
+      "code 422 on Verify Address": 1,
+      "code 404 on Verify Address": 1
     },
     "scenariosAvoided": 0,
     "phases": [
@@ -248,27 +314,27 @@
   },
   "intermediate": [
     {
-      "timestamp": "2021-12-17T11:30:17.451Z",
+      "timestamp": "2021-12-21T12:13:13.247Z",
       "scenariosCreated": 1,
-      "scenariosCompleted": 1,
-      "requestsCompleted": 19,
+      "scenariosCompleted": 0,
+      "requestsCompleted": 20,
       "latency": {
-        "min": 250,
-        "max": 883,
-        "median": 314,
-        "p95": 659.4,
-        "p99": 883
+        "min": 293,
+        "max": 835,
+        "median": 366.5,
+        "p95": 722,
+        "p99": 835
       },
       "rps": {
-        "count": 19,
-        "mean": 2.7
+        "count": 21,
+        "mean": 2.34
       },
       "scenarioDuration": {
-        "min": 6959.5,
-        "max": 6959.5,
-        "median": 6959.5,
-        "p95": 6959.5,
-        "p99": 6959.5
+        "min": null,
+        "max": null,
+        "median": null,
+        "p95": null,
+        "p99": null
       },
       "scenarioCounts": {
         "Functional Testing": 1
@@ -277,143 +343,150 @@
       "codes": {
         "200": 2,
         "201": 1,
-        "404": 5,
-        "422": 11
+        "404": 2,
+        "422": 15
       },
       "matches": 0,
       "customStats": {
         "Create Wallet": {
-          "min": 509,
-          "max": 509,
-          "median": 509,
-          "p95": 509,
-          "p99": 509
+          "min": 584,
+          "max": 584,
+          "median": 584,
+          "p95": 584,
+          "p99": 584
         },
         "Create Wallet with same registration number": {
-          "min": 397,
-          "max": 397,
-          "median": 397,
-          "p95": 397,
-          "p99": 397
+          "min": 387,
+          "max": 387,
+          "median": 387,
+          "p95": 387,
+          "p99": 387
         },
         "Create Wallet Registration Id as alphabets": {
-          "min": 342,
-          "max": 342,
-          "median": 342,
-          "p95": 342,
-          "p99": 342
+          "min": 357,
+          "max": 357,
+          "median": 357,
+          "p95": 357,
+          "p99": 357
         },
         "Create Wallet with Registration Id as alpha numeric": {
-          "min": 318,
-          "max": 318,
-          "median": 318,
-          "p95": 318,
-          "p99": 318
+          "min": 456,
+          "max": 456,
+          "median": 456,
+          "p95": 456,
+          "p99": 456
         },
         "Create Wallet with invalid wallet type": {
-          "min": 339,
-          "max": 339,
-          "median": 339,
-          "p95": 339,
-          "p99": 339
+          "min": 839,
+          "max": 839,
+          "median": 839,
+          "p95": 839,
+          "p99": 839
         },
         "Create Wallet with integer wallet type": {
-          "min": 892,
-          "max": 892,
-          "median": 892,
-          "p95": 892,
-          "p99": 892
+          "min": 426,
+          "max": 426,
+          "median": 426,
+          "p95": 426,
+          "p99": 426
         },
         "Create Wallet with integer and float wallet type": {
-          "min": 323,
-          "max": 323,
-          "median": 323,
-          "p95": 323,
-          "p99": 323
+          "min": 599,
+          "max": 599,
+          "median": 599,
+          "p95": 599,
+          "p99": 599
         },
         "Create Wallet with invalid registration id and wallet type": {
-          "min": 328,
-          "max": 328,
-          "median": 328,
-          "p95": 328,
-          "p99": 328
+          "min": 615,
+          "max": 615,
+          "median": 615,
+          "p95": 615,
+          "p99": 615
         },
         "Create Wallet with invalid url 1": {
-          "min": 315,
-          "max": 315,
-          "median": 315,
-          "p95": 315,
-          "p99": 315
+          "min": 346,
+          "max": 346,
+          "median": 346,
+          "p95": 346,
+          "p99": 346
         },
         "Create Wallet with invalid url 2": {
-          "min": 315,
-          "max": 315,
-          "median": 315,
-          "p95": 315,
-          "p99": 315
+          "min": 348,
+          "max": 348,
+          "median": 348,
+          "p95": 348,
+          "p99": 348
+        },
+        "Update Balance": {
+          "min": 356,
+          "max": 356,
+          "median": 356,
+          "p95": 356,
+          "p99": 356
+        },
+        "Update Balance with a amount equals to zero": {
+          "min": 347,
+          "max": 347,
+          "median": 347,
+          "p95": 347,
+          "p99": 347
+        },
+        "Update Balance with alpha-numeric characters in amount field": {
+          "min": 370,
+          "max": 370,
+          "median": 370,
+          "p95": 370,
+          "p99": 370
+        },
+        "Update Balance without registration id": {
+          "min": 344,
+          "max": 344,
+          "median": 344,
+          "p95": 344,
+          "p99": 344
+        },
+        "Update Balance without wallet type": {
+          "min": 373,
+          "max": 373,
+          "median": 373,
+          "p95": 373,
+          "p99": 373
+        },
+        "Update Balance without registration id and wallet type": {
+          "min": 371,
+          "max": 371,
+          "median": 371,
+          "p95": 371,
+          "p99": 371
+        },
+        "Update Balance without registration id and wallet type and invalid amount": {
+          "min": 362,
+          "max": 362,
+          "median": 362,
+          "p95": 362,
+          "p99": 362
         },
         "Get Balance": {
-          "min": 321,
-          "max": 321,
-          "median": 321,
-          "p95": 321,
-          "p99": 321
+          "min": 344,
+          "max": 344,
+          "median": 344,
+          "p95": 344,
+          "p99": 344
         },
         "Get Balance without registration Id": {
-          "min": 313,
-          "max": 313,
-          "median": 313,
-          "p95": 313,
-          "p99": 313
+          "min": 398,
+          "max": 398,
+          "median": 398,
+          "p95": 398,
+          "p99": 398
         },
         "Get Balance without wallet type": {
-          "min": 320,
-          "max": 320,
-          "median": 320,
-          "p95": 320,
-          "p99": 320
-        },
-        "Get Balance without registration Id and wallet Type": {
-          "min": 320,
-          "max": 320,
-          "median": 320,
-          "p95": 320,
-          "p99": 320
-        },
-        "Get Balance with invalid url 1": {
-          "min": 317,
-          "max": 317,
-          "median": 317,
-          "p95": 317,
-          "p99": 317
-        },
-        "Get Balance with invalid url 2": {
-          "min": 313,
-          "max": 313,
-          "median": 313,
-          "p95": 313,
-          "p99": 313
-        },
-        "Get All Wallets": {
-          "min": 324,
-          "max": 324,
-          "median": 324,
-          "p95": 324,
-          "p99": 324
-        },
-        "Get All Wallets without registration Id": {
-          "min": 313,
-          "max": 313,
-          "median": 313,
-          "p95": 313,
-          "p99": 313
-        },
-        "Get All Wallets with invalid url": {
-          "min": 313,
-          "max": 313,
-          "median": 313,
-          "p95": 313,
-          "p99": 313
+          "min": 391,
+          "max": 391,
+          "median": 391,
+          "p95": 391,
+          "p99": 391
         }
       },
       "counters": {
@@ -427,15 +500,113 @@
         "code 422 on Create Wallet with invalid registration id and wallet type": 1,
         "code 404 on Create Wallet with invalid url 1": 1,
         "code 404 on Create Wallet with invalid url 2": 1,
+        "code 200 on Update Balance": 1,
+        "code 422 on Update Balance with a amount equals to zero": 1,
+        "code 422 on Update Balance with alpha-numeric characters in amount field": 1,
+        "code 422 on Update Balance without registration id": 1,
+        "code 422 on Update Balance without wallet type": 1,
+        "code 422 on Update Balance without registration id and wallet type": 1,
+        "code 422 on Update Balance without registration id and wallet type and invalid amount": 1,
         "code 200 on Get Balance": 1,
         "code 422 on Get Balance without registration Id": 1,
-        "code 422 on Get Balance without wallet type": 1,
+        "code 422 on Get Balance without wallet type": 1
+      },
+      "concurrency": 1,
+      "pendingRequests": 1,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-12-21T12:13:17.757Z",
+      "scenariosCreated": 0,
+      "scenariosCompleted": 1,
+      "requestsCompleted": 9,
+      "latency": {
+        "min": 370,
+        "max": 1001,
+        "median": 415,
+        "p95": 1001,
+        "p99": 1001
+      },
+      "rps": {
+        "count": 8,
+        "mean": 1.84
+      },
+      "scenarioDuration": {
+        "min": 13508.4,
+        "max": 13508.4,
+        "median": 13508.4,
+        "p95": 13508.4,
+        "p99": 13508.4
+      },
+      "scenarioCounts": {},
+      "errors": {},
+      "codes": {
+        "200": 2,
+        "404": 4,
+        "422": 3
+      },
+      "matches": 0,
+      "customStats": {
+        "Get Balance without registration Id and wallet Type": {
+          "min": 533,
+          "max": 533,
+          "median": 533,
+          "p95": 533,
+          "p99": 533
+        },
+        "Get Balance with invalid url 1": {
+          "min": 711,
+          "max": 711,
+          "median": 711,
+          "p95": 711,
+          "p99": 711
+        },
+        "Get Balance with invalid url 2": {
+          "min": 377,
+          "max": 377,
+          "median": 377,
+          "p95": 377,
+          "p99": 377
+        },
+        "Get All Wallets": {
+          "min": 393,
+          "max": 393,
+          "median": 393,
+          "p95": 393,
+          "p99": 393
+        },
+        "Get All Wallets without registration Id": {
+          "min": 374,
+          "max": 374,
+          "median": 374,
+          "p95": 374,
+          "p99": 374
+        },
+        "Get All Wallets with invalid url": {
+          "min": 387,
+          "max": 387,
+          "median": 387,
+          "p95": 387,
+          "p99": 387
+        },
+        "Verify Address": {
+          "min": 421,
+          "max": 1007,
+          "median": 654,
+          "p95": 1007,
+          "p99": 1007
+        }
+      },
+      "counters": {
         "code 422 on Get Balance without registration Id and wallet Type": 1,
         "code 404 on Get Balance with invalid url 1": 1,
         "code 404 on Get Balance with invalid url 2": 1,
         "code 200 on Get All Wallets": 1,
         "code 422 on Get All Wallets without registration Id": 1,
-        "code 404 on Get All Wallets with invalid url": 1
+        "code 404 on Get All Wallets with invalid url": 1,
+        "code 200 on Verify Address": 1,
+        "code 422 on Verify Address": 1,
+        "code 404 on Verify Address": 1
       },
       "concurrency": 0,
       "pendingRequests": 0,
@@ -584,7 +755,7 @@
   
     
     <div class="row">
-      <div class="id_1688 text-center col-lg-12"></div>
+      <div class="id_1353 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Create Wallet'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -594,7 +765,7 @@
         animate_on_load: true,
         title: 'Create Wallet distribution',
         description: 'Distribution of Create Wallet',
-        target: '.id_1688',
+        target: '.id_1353',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -610,7 +781,7 @@
   
     
     <div class="row">
-      <div class="id_4850 text-center col-lg-12"></div>
+      <div class="id_4159 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Create Wallet with same registration number'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -620,7 +791,7 @@
         animate_on_load: true,
         title: 'Create Wallet with same registration number distribution',
         description: 'Distribution of Create Wallet with same registration number',
-        target: '.id_4850',
+        target: '.id_4159',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -636,7 +807,7 @@
   
     
     <div class="row">
-      <div class="id_1312 text-center col-lg-12"></div>
+      <div class="id_6601 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Create Wallet Registration Id as alphabets'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -646,7 +817,7 @@
         animate_on_load: true,
         title: 'Create Wallet Registration Id as alphabets distribution',
         description: 'Distribution of Create Wallet Registration Id as alphabets',
-        target: '.id_1312',
+        target: '.id_6601',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -662,7 +833,7 @@
   
     
     <div class="row">
-      <div class="id_4734 text-center col-lg-12"></div>
+      <div class="id_8199 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Create Wallet with Registration Id as alpha numeric'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -672,7 +843,7 @@
         animate_on_load: true,
         title: 'Create Wallet with Registration Id as alpha numeric distribution',
         description: 'Distribution of Create Wallet with Registration Id as alpha numeric',
-        target: '.id_4734',
+        target: '.id_8199',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -688,7 +859,7 @@
   
     
     <div class="row">
-      <div class="id_6104 text-center col-lg-12"></div>
+      <div class="id_2959 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Create Wallet with invalid wallet type'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -698,7 +869,7 @@
         animate_on_load: true,
         title: 'Create Wallet with invalid wallet type distribution',
         description: 'Distribution of Create Wallet with invalid wallet type',
-        target: '.id_6104',
+        target: '.id_2959',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -714,7 +885,7 @@
   
     
     <div class="row">
-      <div class="id_1783 text-center col-lg-12"></div>
+      <div class="id_70 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Create Wallet with integer wallet type'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -724,7 +895,7 @@
         animate_on_load: true,
         title: 'Create Wallet with integer wallet type distribution',
         description: 'Distribution of Create Wallet with integer wallet type',
-        target: '.id_1783',
+        target: '.id_70',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -740,7 +911,7 @@
   
     
     <div class="row">
-      <div class="id_1636 text-center col-lg-12"></div>
+      <div class="id_3595 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Create Wallet with integer and float wallet type'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -750,7 +921,7 @@
         animate_on_load: true,
         title: 'Create Wallet with integer and float wallet type distribution',
         description: 'Distribution of Create Wallet with integer and float wallet type',
-        target: '.id_1636',
+        target: '.id_3595',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -766,7 +937,7 @@
   
     
     <div class="row">
-      <div class="id_2822 text-center col-lg-12"></div>
+      <div class="id_5669 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Create Wallet with invalid registration id and wallet type'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -776,7 +947,7 @@
         animate_on_load: true,
         title: 'Create Wallet with invalid registration id and wallet type distribution',
         description: 'Distribution of Create Wallet with invalid registration id and wallet type',
-        target: '.id_2822',
+        target: '.id_5669',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -792,7 +963,7 @@
   
     
     <div class="row">
-      <div class="id_8067 text-center col-lg-12"></div>
+      <div class="id_5679 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Create Wallet with invalid url 1'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -802,7 +973,7 @@
         animate_on_load: true,
         title: 'Create Wallet with invalid url 1 distribution',
         description: 'Distribution of Create Wallet with invalid url 1',
-        target: '.id_8067',
+        target: '.id_5679',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -818,7 +989,7 @@
   
     
     <div class="row">
-      <div class="id_1326 text-center col-lg-12"></div>
+      <div class="id_2251 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Create Wallet with invalid url 2'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -828,7 +999,7 @@
         animate_on_load: true,
         title: 'Create Wallet with invalid url 2 distribution',
         description: 'Distribution of Create Wallet with invalid url 2',
-        target: '.id_1326',
+        target: '.id_2251',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -844,7 +1015,189 @@
   
     
     <div class="row">
-      <div class="id_6123 text-center col-lg-12"></div>
+      <div class="id_6699 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Update Balance'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Update Balance distribution',
+        description: 'Distribution of Update Balance',
+        target: '.id_6699',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_4266 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Update Balance with a amount equals to zero'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Update Balance with a amount equals to zero distribution',
+        description: 'Distribution of Update Balance with a amount equals to zero',
+        target: '.id_4266',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_6397 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Update Balance with alpha-numeric characters in amount field'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Update Balance with alpha-numeric characters in amount field distribution',
+        description: 'Distribution of Update Balance with alpha-numeric characters in amount field',
+        target: '.id_6397',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_1262 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Update Balance without registration id'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Update Balance without registration id distribution',
+        description: 'Distribution of Update Balance without registration id',
+        target: '.id_1262',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_6004 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Update Balance without wallet type'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Update Balance without wallet type distribution',
+        description: 'Distribution of Update Balance without wallet type',
+        target: '.id_6004',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_5927 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Update Balance without registration id and wallet type'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Update Balance without registration id and wallet type distribution',
+        description: 'Distribution of Update Balance without registration id and wallet type',
+        target: '.id_5927',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_3488 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Update Balance without registration id and wallet type and invalid amount'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Update Balance without registration id and wallet type and invalid amount distribution',
+        description: 'Distribution of Update Balance without registration id and wallet type and invalid amount',
+        target: '.id_3488',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_9690 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Get Balance'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -854,7 +1207,7 @@
         animate_on_load: true,
         title: 'Get Balance distribution',
         description: 'Distribution of Get Balance',
-        target: '.id_6123',
+        target: '.id_9690',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -870,7 +1223,7 @@
   
     
     <div class="row">
-      <div class="id_4976 text-center col-lg-12"></div>
+      <div class="id_9092 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Get Balance without registration Id'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -880,7 +1233,7 @@
         animate_on_load: true,
         title: 'Get Balance without registration Id distribution',
         description: 'Distribution of Get Balance without registration Id',
-        target: '.id_4976',
+        target: '.id_9092',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -896,7 +1249,7 @@
   
     
     <div class="row">
-      <div class="id_645 text-center col-lg-12"></div>
+      <div class="id_2983 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Get Balance without wallet type'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -906,7 +1259,7 @@
         animate_on_load: true,
         title: 'Get Balance without wallet type distribution',
         description: 'Distribution of Get Balance without wallet type',
-        target: '.id_645',
+        target: '.id_2983',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -922,7 +1275,7 @@
   
     
     <div class="row">
-      <div class="id_7000 text-center col-lg-12"></div>
+      <div class="id_624 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Get Balance without registration Id and wallet Type'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -932,7 +1285,7 @@
         animate_on_load: true,
         title: 'Get Balance without registration Id and wallet Type distribution',
         description: 'Distribution of Get Balance without registration Id and wallet Type',
-        target: '.id_7000',
+        target: '.id_624',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -948,7 +1301,7 @@
   
     
     <div class="row">
-      <div class="id_9964 text-center col-lg-12"></div>
+      <div class="id_4621 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Get Balance with invalid url 1'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -958,7 +1311,7 @@
         animate_on_load: true,
         title: 'Get Balance with invalid url 1 distribution',
         description: 'Distribution of Get Balance with invalid url 1',
-        target: '.id_9964',
+        target: '.id_4621',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -974,7 +1327,7 @@
   
     
     <div class="row">
-      <div class="id_5162 text-center col-lg-12"></div>
+      <div class="id_4622 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Get Balance with invalid url 2'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -984,7 +1337,7 @@
         animate_on_load: true,
         title: 'Get Balance with invalid url 2 distribution',
         description: 'Distribution of Get Balance with invalid url 2',
-        target: '.id_5162',
+        target: '.id_4622',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -1000,7 +1353,7 @@
   
     
     <div class="row">
-      <div class="id_6079 text-center col-lg-12"></div>
+      <div class="id_2528 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Get All Wallets'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -1010,7 +1363,7 @@
         animate_on_load: true,
         title: 'Get All Wallets distribution',
         description: 'Distribution of Get All Wallets',
-        target: '.id_6079',
+        target: '.id_2528',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -1026,7 +1379,7 @@
   
     
     <div class="row">
-      <div class="id_6245 text-center col-lg-12"></div>
+      <div class="id_977 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Get All Wallets without registration Id'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -1036,7 +1389,7 @@
         animate_on_load: true,
         title: 'Get All Wallets without registration Id distribution',
         description: 'Distribution of Get All Wallets without registration Id',
-        target: '.id_6245',
+        target: '.id_977',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',
@@ -1052,7 +1405,7 @@
   
     
     <div class="row">
-      <div class="id_9143 text-center col-lg-12"></div>
+      <div class="id_5445 text-center col-lg-12"></div>
       <script>
       var histogramData = _.map(Report.aggregate.customStats['Get All Wallets with invalid url'], function(v, k) { return {bin: k, value: v} });
       MG.data_graphic({
@@ -1062,7 +1415,33 @@
         animate_on_load: true,
         title: 'Get All Wallets with invalid url distribution',
         description: 'Distribution of Get All Wallets with invalid url',
-        target: '.id_9143',
+        target: '.id_5445',
+        data: histogramData,
+        x_accessor: 'bin',
+        y_accessor: 'value',
+        binned: true,
+        height: 250,
+        interpolate: 'monotone',
+        padding_percentage: 0,
+        bar_orientation: 'vertical',
+        width: 450
+      });
+      </script>
+    </div>
+  
+    
+    <div class="row">
+      <div class="id_58 text-center col-lg-12"></div>
+      <script>
+      var histogramData = _.map(Report.aggregate.customStats['Verify Address'], function(v, k) { return {bin: k, value: v} });
+      MG.data_graphic({
+        chart_type: 'bar',
+        x_label: 'Percentile',
+        y_label: '(ms)',
+        animate_on_load: true,
+        title: 'Verify Address distribution',
+        description: 'Distribution of Verify Address',
+        target: '.id_58',
         data: histogramData,
         x_accessor: 'bin',
         y_accessor: 'value',

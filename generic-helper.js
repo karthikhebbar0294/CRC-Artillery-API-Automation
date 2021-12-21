@@ -19,12 +19,27 @@ function addJsonDataforAddressVerify(req, context, _events, done) {
   // req.headers["Content-Length"] = "calculated when request is sent";
   // req.headers["Host"] = "calculated when request is sent";
   req.json = 
-    {
-      primary_line: "deliverable",
-      city: "San Francisco",
-      state: "CA",
-      zip_code: "111111"
-    };
+  {
+    primary_line: "Bangalore",
+    secondary_line: "Karnataka",
+    city: "Electronic City",
+    state: "Karnataka",
+    zip_code: "123456"
+  };
+  return done();
+}
+
+function addJsonDataforAddressVerifyNegativeTest1(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  req.json = 
+  {
+    secondary_line: "Karnataka",
+    city: "Electronic City",
+    state: "Karnataka",
+    zip_code: "123456"
+  };
   return done();
 }
 
@@ -166,9 +181,93 @@ function addJsonDataforUpdateBalance(req, context, _events, done) {
   // req.headers["Host"] = "calculated when request is sent";
   req.json = 
     {
-        registration_id : "201368",
-        wallet_type: "cloudmail",
+        registration_id : context.vars.registration_id,
+        wallet_type: context.vars.wallet_type,
         amount: "50",
+        // transaction_refrence_id: ""
+    };
+  return done();
+}
+
+function addJsonDataforUpdateBalanceNegativeTest1(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  req.json = 
+    {
+        registration_id : context.vars.registration_id,
+        wallet_type: context.vars.wallet_type,
+        amount: "0",
+        // transaction_refrence_id: ""
+    };
+  return done();
+}
+
+function addJsonDataforUpdateBalanceNegativeTest2(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  req.json = 
+    {
+        registration_id : context.vars.registration_id,
+        wallet_type: context.vars.wallet_type,
+        amount: "ABC!24",
+        // transaction_refrence_id: ""
+    };
+  return done();
+}
+
+function addJsonDataforUpdateBalanceNegativeTest3(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  req.json = 
+    {
+        registration_id : "",
+        wallet_type: context.vars.wallet_type,
+        amount: "100",
+        // transaction_refrence_id: ""
+    };
+  return done();
+}
+
+function addJsonDataforUpdateBalanceNegativeTest4(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  req.json = 
+    {
+        registration_id : context.vars.registration_id,
+        wallet_type: "",
+        amount: "100",
+        // transaction_refrence_id: ""
+    };
+  return done();
+}
+
+function addJsonDataforUpdateBalanceNegativeTest5(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  req.json = 
+    {
+        registration_id : "",
+        wallet_type: "",
+        amount: "100",
+        // transaction_refrence_id: ""
+    };
+  return done();
+}
+
+function addJsonDataforUpdateBalanceNegativeTest6(req, context, _events, done) {
+  // req.headers["Content-Type"] = "application/json";
+  // req.headers["Content-Length"] = "calculated when request is sent";
+  // req.headers["Host"] = "calculated when request is sent";
+  req.json = 
+    {
+        registration_id : "",
+        wallet_type: "",
+        amount: "xyz",
         // transaction_refrence_id: ""
     };
   return done();
@@ -185,4 +284,11 @@ exports.addJsonDataforCreateWalletNegativeTest4=addJsonDataforCreateWalletNegati
 exports.addJsonDataforCreateWalletNegativeTest5=addJsonDataforCreateWalletNegativeTest5;
 exports.addJsonDataforCreateWalletNegativeTest6=addJsonDataforCreateWalletNegativeTest6;
 exports.addJsonDataforCreateWalletNegativeTest7=addJsonDataforCreateWalletNegativeTest7;
+exports.addJsonDataforUpdateBalanceNegativeTest1=addJsonDataforUpdateBalanceNegativeTest1;
+exports.addJsonDataforUpdateBalanceNegativeTest2=addJsonDataforUpdateBalanceNegativeTest2;
+exports.addJsonDataforUpdateBalanceNegativeTest3=addJsonDataforUpdateBalanceNegativeTest3;
+exports.addJsonDataforUpdateBalanceNegativeTest4=addJsonDataforUpdateBalanceNegativeTest4;
+exports.addJsonDataforUpdateBalanceNegativeTest5=addJsonDataforUpdateBalanceNegativeTest5;
+exports.addJsonDataforUpdateBalanceNegativeTest6=addJsonDataforUpdateBalanceNegativeTest6;
+exports.addJsonDataforAddressVerifyNegativeTest1=addJsonDataforAddressVerifyNegativeTest1;
 // exports.updateAddressId=updateAddressId;
