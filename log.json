@@ -1,0 +1,700 @@
+
+> artillery-test@1.0.0 test /home/altorum007/Desktop/crc-artillery-git/CRC-Artillery-API-Automation
+> artillery run -o AddressAPI.json CloudMail/src/test/AddressAPI.yml && artillery run -o WalletAPI.json CloudMail/src/test/WalletAPI.yml; artillery report AddressAPI.json && artillery report WalletAPI.json
+
+Started phase 0, duration: 1s @ 11:41:18(+0530) 2021-12-27
+we started to verify the address
+* POST /api/address/verify - Verify Address with valid data
+  ok statusCode 200 
+this is the data what we have got from the server: {"status":"success","data":{"deliverability":"undeliverable","address_object":{"primary_number":"","street_predirection":"","street_name":"BANGALORE","street_suffix":"","street_postdirection":"","secondary_designator":"","secondary_number":"","pmb_designator":"","pmb_number":"","extra_secondary_designator":"","extra_secondary_number":"","city":"ELECTRONIC CITY","state":"KARNATAKA","zip_code":"","zip_code_plus_4":"","zip_code_type":"unique","delivery_point_barcode":"","address_type":"","record_type":"","default_building_address":false,"county":"","county_fips":"","carrier_route":"","carrier_route_type":"","latitude":null,"longitude":null,"primary_line":"BANGALORE","secondary_line":"KARNATAKA","urbanization":"","last_line":"ELECTRONIC CITY KARNATAKA"}}}
+we started to verify the address without primary line in the address
+* POST /api/address/verify - Verify Address without primary line in the address
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"error","code":"invalid_request","message":"Something went wrong. Please try again"}
+we started to verify the address with invalid url
+* POST /api/addressverify - Verify Address with invalid url
+  ok statusCode 404 
+this is the data what we have got from the server: {"status":"error","code":"not_found","message":"The URL you were looking for doesn't exist. You may have mistyped or the URL may have changed"}
+we are started get the service types
+* GET /api/service/types - get service types
+  ok statusCode 200 
+this is the data what we have got from the server: {"status":"success","data":{"services":[{"name":"Standard Mail"},{"name":"First Class Mail"},{"name":"Certified Mail"}]}}
+we are started get the service types with invalid url
+* GET /api/servicetypes - get service types with invalid url
+  ok statusCode 404 
+this is the data what we have got from the server: {"status":"error","code":"not_found","message":"The URL you were looking for doesn't exist. You may have mistyped or the URL may have changed"}
+we started to get system pricing
+* GET /api/pricing - System Pricing with valid url
+  ok statusCode 200 
+this is the data what we have got from the server: {"status":"success","data":{"pricing_details":[{"id":"09e253ba-d725-4572-bdb6-67dec966d82d","name":"Standard Mail","is_enabled":true,"product_variants":[{"id":"2a3eb393-f80d-428a-be99-85704f1662b5","product_id":"09e253ba-d725-4572-bdb6-67dec966d82d","name":"No Color","price":"0.97","currency":"USD","effective_date":"2021-12-10"},{"id":"29d2ac09-0912-4809-92c3-c751e21ebbe5","product_id":"09e253ba-d725-4572-bdb6-67dec966d82d","name":"Color","price":"0.99","currency":"USD","effective_date":"2021-12-10"}]},{"id":"55bb4fa8-4388-4a39-b93e-e12d57b50eba","name":"First Class Mail","is_enabled":true,"product_variants":[{"id":"8615185b-3699-4c0f-8128-08fafc91c530","product_id":"55bb4fa8-4388-4a39-b93e-e12d57b50eba","name":"No Color","price":"0.98","currency":"USD","effective_date":"2021-12-10"},{"id":"9103922b-71d5-4133-80e6-86a9d5d11291","product_id":"55bb4fa8-4388-4a39-b93e-e12d57b50eba","name":"Color","price":"1.18","currency":"USD","effective_date":"2021-12-10"}]},{"id":"974091a6-d68e-4a60-b7a8-b5c9bf8839e5","name":"Certified Mail","is_enabled":true,"product_variants":[{"id":"8fe0c8ea-3532-44c0-9a67-4f1550ab93be","product_id":"974091a6-d68e-4a60-b7a8-b5c9bf8839e5","name":"No Color","price":"5.5","currency":"USD","effective_date":"2021-12-10"},{"id":"8845c4a7-37a5-4bec-b1af-55f9780d6e08","product_id":"974091a6-d68e-4a60-b7a8-b5c9bf8839e5","name":"Color","price":"5.7","currency":"USD","effective_date":"2021-12-10"}]},{"id":"e0ac5172-9975-4a4f-93ea-b978e277e5f4","name":"Additional Page","is_enabled":true,"product_variants":[{"id":"49a481b9-2314-4238-a621-899dcc90ae65","product_id":"e0ac5172-9975-4a4f-93ea-b978e277e5f4","name":"No Color","price":"0.12","currency":"USD","effective_date":"2021-12-10"},{"id":"afc61608-7d1c-4346-b817-c0c3150cef21","product_id":"e0ac5172-9975-4a4f-93ea-b978e277e5f4","name":"Color","price":"0.24","currency":"USD","effective_date":"2021-12-10"}]},{"id":"5c72c7d8-377b-40c0-9391-106d27c25c43","name":"Over 6 Pages","is_enabled":true,"product_variants":[{"id":"f6f52eb6-68e3-4f80-8d32-eaf8f3bf545e","product_id":"5c72c7d8-377b-40c0-9391-106d27c25c43","name":"Other","price":"1.99","currency":"USD","effective_date":"2021-12-10"}]}]}}
+we started to get system pricing
+* GET /apipricing - System Pricing with invalid url
+  ok statusCode 404 
+this is the data what we have got from the server: {"status":"error","code":"not_found","message":"The URL you were looking for doesn't exist. You may have mistyped or the URL may have changed"}
+Report @ 11:41:22(+0530) 2021-12-27
+Elapsed time: 4 seconds
+  Scenarios launched:  1
+  Scenarios completed: 1
+  Requests completed:  7
+  Mean response/sec: 2.01
+  Response time (msec):
+    min: 264
+    max: 668
+    median: 329
+    p95: 668
+    p99: 668
+  Codes:
+    200: 3
+    404: 3
+    422: 1
+  Verify Address with valid data:
+    min: 959
+    max: 959
+    median: 959
+    p95: 959
+    p99: 959
+  Verify Address without primary line in the address:
+    min: 581
+    max: 581
+    median: 581
+    p95: 581
+    p99: 581
+  Verify Address with invalid url:
+    min: 334
+    max: 334
+    median: 334
+    p95: 334
+    p99: 334
+  get service types:
+    min: 268
+    max: 268
+    median: 268
+    p95: 268
+    p99: 268
+  get service types with invalid url:
+    min: 334
+    max: 334
+    median: 334
+    p95: 334
+    p99: 334
+  System Pricing with valid url:
+    min: 282
+    max: 282
+    median: 282
+    p95: 282
+    p99: 282
+  System Pricing with invalid url:
+    min: 337
+    max: 337
+    median: 337
+    p95: 337
+    p99: 337
+  code 200 on Verify Address with valid data: 1
+  code 422 on Verify Address without primary line in the address: 1
+  code 404 on Verify Address with invalid url: 1
+  code 200 on get service types: 1
+  code 404 on get service types with invalid url: 1
+  code 200 on System Pricing with valid url: 1
+  code 404 on System Pricing with invalid url: 1
+
+All virtual users finished
+Summary report @ 11:41:22(+0530) 2021-12-27
+  Scenarios launched:  1
+  Scenarios completed: 1
+  Requests completed:  7
+  Mean response/sec: 2
+  Response time (msec):
+    min: 264
+    max: 668
+    median: 329
+    p95: 668
+    p99: 668
+  Scenario counts:
+    Address API positive and negative test: 1 (100%)
+  Codes:
+    200: 3
+    404: 3
+    422: 1
+  Verify Address with valid data:
+    min: 959
+    max: 959
+    median: 959
+    p95: 959
+    p99: 959
+  Verify Address without primary line in the address:
+    min: 581
+    max: 581
+    median: 581
+    p95: 581
+    p99: 581
+  Verify Address with invalid url:
+    min: 334
+    max: 334
+    median: 334
+    p95: 334
+    p99: 334
+  get service types:
+    min: 268
+    max: 268
+    median: 268
+    p95: 268
+    p99: 268
+  get service types with invalid url:
+    min: 334
+    max: 334
+    median: 334
+    p95: 334
+    p99: 334
+  System Pricing with valid url:
+    min: 282
+    max: 282
+    median: 282
+    p95: 282
+    p99: 282
+  System Pricing with invalid url:
+    min: 337
+    max: 337
+    median: 337
+    p95: 337
+    p99: 337
+  code 200 on Verify Address with valid data: 1
+  code 422 on Verify Address without primary line in the address: 1
+  code 404 on Verify Address with invalid url: 1
+  code 200 on get service types: 1
+  code 404 on get service types with invalid url: 1
+  code 200 on System Pricing with valid url: 1
+  code 404 on System Pricing with invalid url: 1
+
+Log file: AddressAPI.json
+Started phase 0, duration: 1s @ 11:41:23(+0530) 2021-12-27
+we started to create the wallet
+* POST /api/wallet - Create Wallet
+  ok statusCode 201 
+this is the data what we have got from the server: {"status":"success","data":{"wallet":{"id":"0c456876-317d-48b9-bba5-e2d4ffa25a76","type":"cloudmail","crc_user_id":88966,"balance":0}}}
+we started to create the wallet with same registration number
+* POST /api/wallet - Create Wallet with same registration number
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":{"registration_id":["The registration id must be an integer."]}}
+we started to create the wallet with the registration Id as alphabets
+* POST /api/wallet - Create Wallet Registration Id as alphabets
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":{"registration_id":["The registration id must be an integer."]}}
+we started to create the wallet with the registration id as alpha numeric
+* POST /api/wallet - Create Wallet with Registration Id as alpha numeric
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":{"registration_id":["The registration id must be an integer."]}}
+we started to create the wallet by changing the wallet type
+* POST /api/wallet - Create Wallet with invalid wallet type
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":{"wallet_type":["The value you have entered is invalid."]}}
+we started to create the wallet by changing the wallet type with integers
+* POST /api/wallet - Create Wallet with integer wallet type
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":{"wallet_type":["The value you have entered is invalid."]}}
+we started to create the wallet by changing the wallet type with integers and float values
+* POST /api/wallet - Create Wallet with integer and float wallet type
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":{"wallet_type":["The value you have entered is invalid."]}}
+we started to create the wallet with invalid registration id and wallet type
+* POST /api/wallet - Create Wallet with invalid registration id and wallet type
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":{"registration_id":["The registration id must be an integer."],"wallet_type":["The value you have entered is invalid."]}}
+we started to create the wallet with invalid url
+* POST /api/walet - Create Wallet with invalid url 1
+  ok statusCode 404 
+this is the data what we have got from the server: {"status":"error","code":"not_found","message":"The URL you were looking for doesn't exist. You may have mistyped or the URL may have changed"}
+we started to create the wallet with invalid url
+* POST /api/walet - Create Wallet with invalid url 2
+  ok statusCode 404 
+this is the data what we have got from the server: {"status":"error","code":"not_found","message":"The URL you were looking for doesn't exist. You may have mistyped or the URL may have changed"}
+we started to update balance
+* POST /api/wallet/recharge - Update Balance
+  ok statusCode 200 
+this is the data what we have got from the server: {"status":"fail","code":"not_found","message":"No wallet found with the given details"}
+we started to update balance with a amount equals to zero
+* POST /api/wallet/recharge - Update Balance with a amount equals to zero
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":{"amount":["The amount must be at least 0.1."]}}
+we started to update balance with alpha-numeric characters in amount field
+* POST /api/wallet/recharge - Update Balance with alpha-numeric characters in amount field
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":{"amount":["The amount must be a number."]}}
+we started to update balance without registration id
+* POST /api/wallet/recharge - Update Balance without registration id
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":{"registration_id":["The registration id field is required."]}}
+we started to update balance without wallet type
+* POST /api/wallet/recharge - Update Balance without wallet type
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":{"wallet_type":["The wallet type field is required."]}}
+we started to update balance without registration id and wallet type
+* POST /api/wallet/recharge - Update Balance without registration id and wallet type
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":{"registration_id":["The registration id field is required."],"wallet_type":["The wallet type field is required."]}}
+we started to update balance without registration id and wallet type and invalid amount
+* POST /api/wallet/recharge - Update Balance without registration id and wallet type and invalid amount
+  ok statusCode 422 
+  ok contentType json 
+  ok hasProperty message.registration_id 
+  ok hasProperty message.wallet_type 
+  ok hasProperty message.amount 
+  ok equals The registration id field is required., The registration id field is required. 
+  ok equals The wallet type field is required., The wallet type field is required. 
+  ok equals The amount must be a number., The amount must be a number. 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":{"registration_id":["The registration id field is required."],"wallet_type":["The wallet type field is required."],"amount":["The amount must be a number."]}}
+we started to get the balance
+* GET /api/wallet/balance/94252/cloudmail - Get Balance
+  ok statusCode 200 
+this is the data what we have got from the server: {"status":"fail","code":"not_found","message":"No wallet found with the given details"}
+we started to get the balance without registration Id
+* GET /api/wallet/balance/%7B%7B%7D%7D/cloudmail - Get Balance without registration Id
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":"Registration id is invalid"}
+we started to get the balance without wallet type
+* GET /api/wallet/balance/94252/%7B%7B%7D%7D - Get Balance without wallet type
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":"Wallet type is invalid"}
+we started to get the balance without registration Id and wallet type
+* GET /api/wallet/balance/%7B%7B%7D%7D/%7B%7B%7D%7D - Get Balance without registration Id and wallet Type
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":"Registration id is invalid"}
+we started to get the balance with invalid url 1
+* GET /apiwallet/balance/94252/cloudmail - Get Balance with invalid url 1
+  ok statusCode 404 
+this is the data what we have got from the server: {"status":"error","code":"not_found","message":"The URL you were looking for doesn't exist. You may have mistyped or the URL may have changed"}
+we started to get the balance with invalid url 2
+* GET /api/wallet/balance - Get Balance with invalid url 2
+  ok statusCode 404 
+this is the data what we have got from the server: {"status":"error","code":"not_found","message":"The URL you were looking for doesn't exist. You may have mistyped or the URL may have changed"}
+we started to get all wallets
+* GET /api/wallets/94252 - Get All Wallets
+  ok statusCode 200 
+this is the data what we have got from the server: {"status":"fail","code":"not_found","message":"No wallets found with the given details"}
+we started to get all wallets without registration Id
+* GET /api/wallets/%7B%7B%7D%7D - Get All Wallets without registration Id
+  ok statusCode 422 
+this is the data what we have got from the server: {"status":"fail","code":"invalid_request","message":"Registration id is invalid"}
+we started to get all wallets with invalid url
+Report @ 11:41:33(+0530) 2021-12-27
+Elapsed time: 10 seconds
+  Scenarios launched:  1
+  Scenarios completed: 0
+  Requests completed:  25
+  Mean response/sec: 2.9
+  Response time (msec):
+    min: 268
+    max: 426
+    median: 337
+    p95: 376.5
+    p99: 426
+  Codes:
+    200: 3
+    201: 1
+    404: 4
+    422: 17
+  Create Wallet:
+    min: 548
+    max: 548
+    median: 548
+    p95: 548
+    p99: 548
+  Create Wallet with same registration number:
+    min: 431
+    max: 431
+    median: 431
+    p95: 431
+    p99: 431
+  Create Wallet Registration Id as alphabets:
+    min: 348
+    max: 348
+    median: 348
+    p95: 348
+    p99: 348
+  Create Wallet with Registration Id as alpha numeric:
+    min: 338
+    max: 338
+    median: 338
+    p95: 338
+    p99: 338
+  Create Wallet with invalid wallet type:
+    min: 355
+    max: 355
+    median: 355
+    p95: 355
+    p99: 355
+  Create Wallet with integer wallet type:
+    min: 343
+    max: 343
+    median: 343
+    p95: 343
+    p99: 343
+  Create Wallet with integer and float wallet type:
+    min: 362
+    max: 362
+    median: 362
+    p95: 362
+    p99: 362
+  Create Wallet with invalid registration id and wallet type:
+    min: 341
+    max: 341
+    median: 341
+    p95: 341
+    p99: 341
+  Create Wallet with invalid url 1:
+    min: 345
+    max: 345
+    median: 345
+    p95: 345
+    p99: 345
+  Create Wallet with invalid url 2:
+    min: 332
+    max: 332
+    median: 332
+    p95: 332
+    p99: 332
+  Update Balance:
+    min: 345
+    max: 345
+    median: 345
+    p95: 345
+    p99: 345
+  Update Balance with a amount equals to zero:
+    min: 366
+    max: 366
+    median: 366
+    p95: 366
+    p99: 366
+  Update Balance with alpha-numeric characters in amount field:
+    min: 340
+    max: 340
+    median: 340
+    p95: 340
+    p99: 340
+  Update Balance without registration id:
+    min: 341
+    max: 341
+    median: 341
+    p95: 341
+    p99: 341
+  Update Balance without wallet type:
+    min: 342
+    max: 342
+    median: 342
+    p95: 342
+    p99: 342
+  Update Balance without registration id and wallet type:
+    min: 358
+    max: 358
+    median: 358
+    p95: 358
+    p99: 358
+  Update Balance without registration id and wallet type and invalid amount:
+    min: 335
+    max: 335
+    median: 335
+    p95: 335
+    p99: 335
+  Get Balance:
+    min: 347
+    max: 347
+    median: 347
+    p95: 347
+    p99: 347
+  Get Balance without registration Id:
+    min: 336
+    max: 336
+    median: 336
+    p95: 336
+    p99: 336
+  Get Balance without wallet type:
+    min: 353
+    max: 353
+    median: 353
+    p95: 353
+    p99: 353
+  Get Balance without registration Id and wallet Type:
+    min: 333
+    max: 333
+    median: 333
+    p95: 333
+    p99: 333
+  Get Balance with invalid url 1:
+    min: 332
+    max: 332
+    median: 332
+    p95: 332
+    p99: 332
+  Get Balance with invalid url 2:
+    min: 330
+    max: 330
+    median: 330
+    p95: 330
+    p99: 330
+  Get All Wallets:
+    min: 344
+    max: 344
+    median: 344
+    p95: 344
+    p99: 344
+  Get All Wallets without registration Id:
+    min: 339
+    max: 339
+    median: 339
+    p95: 339
+    p99: 339
+  code 201 on Create Wallet: 1
+  code 422 on Create Wallet with same registration number: 1
+  code 422 on Create Wallet Registration Id as alphabets: 1
+  code 422 on Create Wallet with Registration Id as alpha numeric: 1
+  code 422 on Create Wallet with invalid wallet type: 1
+  code 422 on Create Wallet with integer wallet type: 1
+  code 422 on Create Wallet with integer and float wallet type: 1
+  code 422 on Create Wallet with invalid registration id and wallet type: 1
+  code 404 on Create Wallet with invalid url 1: 1
+  code 404 on Create Wallet with invalid url 2: 1
+  code 200 on Update Balance: 1
+  code 422 on Update Balance with a amount equals to zero: 1
+  code 422 on Update Balance with alpha-numeric characters in amount field: 1
+  code 422 on Update Balance without registration id: 1
+  code 422 on Update Balance without wallet type: 1
+  code 422 on Update Balance without registration id and wallet type: 1
+  code 422 on Update Balance without registration id and wallet type and invalid amount: 1
+  code 200 on Get Balance: 1
+  code 422 on Get Balance without registration Id: 1
+  code 422 on Get Balance without wallet type: 1
+  code 422 on Get Balance without registration Id and wallet Type: 1
+  code 404 on Get Balance with invalid url 1: 1
+  code 404 on Get Balance with invalid url 2: 1
+  code 200 on Get All Wallets: 1
+  code 422 on Get All Wallets without registration Id: 1
+
+* GET /apiwallets/94252 - Get All Wallets with invalid url
+  ok statusCode 404 
+this is the data what we have got from the server: {"status":"error","code":"not_found","message":"The URL you were looking for doesn't exist. You may have mistyped or the URL may have changed"}
+Report @ 11:41:34(+0530) 2021-12-27
+Elapsed time: 10 seconds
+  Scenarios launched:  0
+  Scenarios completed: 1
+  Requests completed:  1
+  Mean response/sec: NaN
+  Response time (msec):
+    min: 332
+    max: 332
+    median: 332
+    p95: 332
+    p99: 332
+  Codes:
+    404: 1
+  Get All Wallets with invalid url:
+    min: 335
+    max: 335
+    median: 335
+    p95: 335
+    p99: 335
+  code 404 on Get All Wallets with invalid url: 1
+
+All virtual users finished
+Summary report @ 11:41:34(+0530) 2021-12-27
+  Scenarios launched:  1
+  Scenarios completed: 1
+  Requests completed:  26
+  Mean response/sec: 2.74
+  Response time (msec):
+    min: 268
+    max: 426
+    median: 337
+    p95: 373.2
+    p99: 426
+  Scenario counts:
+    Create Wallet API positive and negative test: 1 (100%)
+  Codes:
+    200: 3
+    201: 1
+    404: 5
+    422: 17
+  Create Wallet:
+    min: 548
+    max: 548
+    median: 548
+    p95: 548
+    p99: 548
+  Create Wallet with same registration number:
+    min: 431
+    max: 431
+    median: 431
+    p95: 431
+    p99: 431
+  Create Wallet Registration Id as alphabets:
+    min: 348
+    max: 348
+    median: 348
+    p95: 348
+    p99: 348
+  Create Wallet with Registration Id as alpha numeric:
+    min: 338
+    max: 338
+    median: 338
+    p95: 338
+    p99: 338
+  Create Wallet with invalid wallet type:
+    min: 355
+    max: 355
+    median: 355
+    p95: 355
+    p99: 355
+  Create Wallet with integer wallet type:
+    min: 343
+    max: 343
+    median: 343
+    p95: 343
+    p99: 343
+  Create Wallet with integer and float wallet type:
+    min: 362
+    max: 362
+    median: 362
+    p95: 362
+    p99: 362
+  Create Wallet with invalid registration id and wallet type:
+    min: 341
+    max: 341
+    median: 341
+    p95: 341
+    p99: 341
+  Create Wallet with invalid url 1:
+    min: 345
+    max: 345
+    median: 345
+    p95: 345
+    p99: 345
+  Create Wallet with invalid url 2:
+    min: 332
+    max: 332
+    median: 332
+    p95: 332
+    p99: 332
+  Update Balance:
+    min: 345
+    max: 345
+    median: 345
+    p95: 345
+    p99: 345
+  Update Balance with a amount equals to zero:
+    min: 366
+    max: 366
+    median: 366
+    p95: 366
+    p99: 366
+  Update Balance with alpha-numeric characters in amount field:
+    min: 340
+    max: 340
+    median: 340
+    p95: 340
+    p99: 340
+  Update Balance without registration id:
+    min: 341
+    max: 341
+    median: 341
+    p95: 341
+    p99: 341
+  Update Balance without wallet type:
+    min: 342
+    max: 342
+    median: 342
+    p95: 342
+    p99: 342
+  Update Balance without registration id and wallet type:
+    min: 358
+    max: 358
+    median: 358
+    p95: 358
+    p99: 358
+  Update Balance without registration id and wallet type and invalid amount:
+    min: 335
+    max: 335
+    median: 335
+    p95: 335
+    p99: 335
+  Get Balance:
+    min: 347
+    max: 347
+    median: 347
+    p95: 347
+    p99: 347
+  Get Balance without registration Id:
+    min: 336
+    max: 336
+    median: 336
+    p95: 336
+    p99: 336
+  Get Balance without wallet type:
+    min: 353
+    max: 353
+    median: 353
+    p95: 353
+    p99: 353
+  Get Balance without registration Id and wallet Type:
+    min: 333
+    max: 333
+    median: 333
+    p95: 333
+    p99: 333
+  Get Balance with invalid url 1:
+    min: 332
+    max: 332
+    median: 332
+    p95: 332
+    p99: 332
+  Get Balance with invalid url 2:
+    min: 330
+    max: 330
+    median: 330
+    p95: 330
+    p99: 330
+  Get All Wallets:
+    min: 344
+    max: 344
+    median: 344
+    p95: 344
+    p99: 344
+  Get All Wallets without registration Id:
+    min: 339
+    max: 339
+    median: 339
+    p95: 339
+    p99: 339
+  Get All Wallets with invalid url:
+    min: 335
+    max: 335
+    median: 335
+    p95: 335
+    p99: 335
+  code 201 on Create Wallet: 1
+  code 422 on Create Wallet with same registration number: 1
+  code 422 on Create Wallet Registration Id as alphabets: 1
+  code 422 on Create Wallet with Registration Id as alpha numeric: 1
+  code 422 on Create Wallet with invalid wallet type: 1
+  code 422 on Create Wallet with integer wallet type: 1
+  code 422 on Create Wallet with integer and float wallet type: 1
+  code 422 on Create Wallet with invalid registration id and wallet type: 1
+  code 404 on Create Wallet with invalid url 1: 1
+  code 404 on Create Wallet with invalid url 2: 1
+  code 200 on Update Balance: 1
+  code 422 on Update Balance with a amount equals to zero: 1
+  code 422 on Update Balance with alpha-numeric characters in amount field: 1
+  code 422 on Update Balance without registration id: 1
+  code 422 on Update Balance without wallet type: 1
+  code 422 on Update Balance without registration id and wallet type: 1
+  code 422 on Update Balance without registration id and wallet type and invalid amount: 1
+  code 200 on Get Balance: 1
+  code 422 on Get Balance without registration Id: 1
+  code 422 on Get Balance without wallet type: 1
+  code 422 on Get Balance without registration Id and wallet Type: 1
+  code 404 on Get Balance with invalid url 1: 1
+  code 404 on Get Balance with invalid url 2: 1
+  code 200 on Get All Wallets: 1
+  code 422 on Get All Wallets without registration Id: 1
+  code 404 on Get All Wallets with invalid url: 1
+
+Log file: WalletAPI.json
+Report generated: AddressAPI.json.html
+Report generated: WalletAPI.json.html

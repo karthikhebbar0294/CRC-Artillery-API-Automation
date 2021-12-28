@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "artillery run -o report.json src/test/cloudmail-api-negative-test.yml; artillery report report.json"
+    "test": "artillery run -o WalletAPI.json CloudMail/src/test/WalletAPI.yml; artillery report WalletAPI.json"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,9 @@
   "dependencies": {
     "artillery-plugin-expect": "^1.3.0",
     "artillery-plugin-metrics-by-endpoint": "^0.1.1",
+    "fs": "0.0.1-security",
+    "json-merger": "^1.1.7",
+    "merge-json": "0.1.0-b.3",
     "nanoid": "^3.1.25"
   }
 }

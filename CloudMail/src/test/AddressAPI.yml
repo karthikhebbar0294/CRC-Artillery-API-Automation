@@ -1,0 +1,138 @@
+# File: crc-negative-test.yml
+# Project: Credit Repair Cloud
+# File Created: Friday,  17-12-2021, 09:30 am
+# Author: Karthik Hebbar A
+# Last Modified: Monday, 27-12-2021, 05:58 pm
+# Modified By: Karthik Hebbar A<karthik.hebbar@altorumleren.com>
+# This script contains the artillery automation scripts for cloud mail api's for the negative scenario
+
+config:
+  ensure:
+    max: 1000
+  target: "http://10.1.1.76:9000"
+  processor: "../../CloudMailData.js"
+  plugins:
+    expect: {}
+    metrics-by-endpoint:
+      useOnlyRequestNames: true
+
+  phases:
+    - duration: 1
+      arrivalRate: 1
+
+scenarios:
+
+  - name: "Address API positive and negative test"
+    flow:
+
+      - log: "we started to verify the address"
+      - post:
+          url: "/api/address/verify"
+          name: "Verify Address with valid data"
+          beforeRequest: "addJsonDataforAddressVerify"
+          capture:
+            json: "$"
+            as: postAddressVerifyResponse
+          expect:
+            - statusCode: 200
+      - log: "this is the data what we have got from the server: {{postAddressVerifyResponse}}"
+
+      - log: "we started to verify the address without primary line in the address"
+      - post:
+          url: "/api/address/verify"
+          name: "Verify Address without primary line in the address"
+          beforeRequest: "addJsonDataforAddressVerifyNegativeTest1"
+          capture:
+            json: "$"
+            as: postAddressVerifyResponseNegativeTest1
+          expect:
+            - statusCode: 422
+      - log: "this is the data what we have got from the server: {{postAddressVerifyResponseNegativeTest1}}"
+
+      - log: "we started to verify the address with invalid url"
+      - post:
+          url: "/api/addressverify"
+          name: "Verify Address with invalid url"
+          capture:
+            json: "$"
+            as: postAddressVerifyResponse
+          expect:
+            - statusCode: 404
+      - log: "this is the data what we have got from the server: {{postAddressVerifyResponse}}"
+
+      - log: "we started to get Address Auto Complete"
+      - get:
+          url: "api/address/list/{{primary_line}}"
+          name: "Address Auto Complete"
+          capture:
+            json: "$"
+            as: getAddressAutoCompleteResponse
+          expect:
+            - statusCode: 200
+      - log: "this is the data what we have got from the server: {{getAddressAutoCompleteResponse}}"
+
+      - log: "we started to get Address Auto Complete without primary line"
+      - get:
+          url: "api/address/list/{{primary_line}}"
+          name: "Address Auto Complete without primary line"
+          capture:
+            json: "$"
+            as: getAddressAutoCompleteResponseNegativeTest1
+          expect:
+            - statusCode: 422
+      - log: "this is the data what we have got from the server: {{getAddressAutoCompleteResponseNegativeTest1}}"
+
+      - log: "we started to get Address Auto Complete with invalid url"
+      - get:
+          url: "api/address/list"
+          name: "Address Auto Complete with invalid url"
+          capture:
+            json: "$"
+            as: getAddressAutoCompleteResponseNegativeTest2
+          expect:
+            - statusCode: 422
+      - log: "this is the data what we have got from the server: {{getAddressAutoCompleteResponseNegativeTest2}}"
+
+      - log: "we are started get the service types"
+      - get:
+          url: "/api/service/types"
+          name: "get service types"
+          capture:
+            json: "$"
+            as: getServiceTypesResponse
+          expect:
+            - statusCode: 200
+      - log: "this is the data what we have got from the server: {{getServiceTypesResponse}}"
+
+      - log: "we are started get the service types with invalid url"
+      - get:
+          url: "/api/servicetypes"
+          name: "get service types with invalid url"
+          capture:
+            json: "$"
+            as: getServiceTypesResponseNegativeTest1
+          expect:
+            - statusCode: 404
+      - log: "this is the data what we have got from the server: {{getServiceTypesResponseNegativeTest1}}"
+
+      - log: "we started to get system pricing"
+      - get:
+          url: "/api/pricing"
+          name: "System Pricing with valid url"
+          capture:
+            json: "$"
+            as: getSystemPricingResponse
+          expect:
+            - statusCode: 200
+      - log: "this is the data what we have got from the server: {{getSystemPricingResponse}}"
+
+      - log: "we started to get system pricing"
+      - get:
+          url: "/apipricing"
+          name: "System Pricing with invalid url"
+          capture:
+            json: "$"
+            as: getSystemPricingResponseNegativeTest1
+          expect:
+            - statusCode: 404
+      - log: "this is the data what we have got from the server: {{getSystemPricingResponseNegativeTest1}}"

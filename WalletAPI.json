@@ -1,0 +1,468 @@
+{
+  "aggregate": {
+    "timestamp": "2021-12-28T12:30:27.824Z",
+    "scenariosCreated": 1,
+    "scenariosCompleted": 1,
+    "requestsCompleted": 20,
+    "latency": {
+      "min": 307,
+      "max": 718,
+      "median": 368,
+      "p95": 657,
+      "p99": 718
+    },
+    "rps": {
+      "count": 20,
+      "mean": 2.22
+    },
+    "scenarioDuration": {
+      "min": 8777.9,
+      "max": 8777.9,
+      "median": 8777.9,
+      "p95": 8777.9,
+      "p99": 8777.9
+    },
+    "scenarioCounts": {
+      "Create Wallet API positive and negative test": 1
+    },
+    "errors": {},
+    "codes": {
+      "200": 2,
+      "201": 1,
+      "404": 2,
+      "422": 15
+    },
+    "matches": 0,
+    "customStats": {
+      "Create Wallet": {
+        "min": 587,
+        "max": 587,
+        "median": 587,
+        "p95": 587,
+        "p99": 587
+      },
+      "Create Wallet with same registration number": {
+        "min": 449,
+        "max": 449,
+        "median": 449,
+        "p95": 449,
+        "p99": 449
+      },
+      "Create Wallet Registration Id as alphabets": {
+        "min": 371,
+        "max": 371,
+        "median": 371,
+        "p95": 371,
+        "p99": 371
+      },
+      "Create Wallet with Registration Id as alpha numeric": {
+        "min": 451,
+        "max": 451,
+        "median": 451,
+        "p95": 451,
+        "p99": 451
+      },
+      "Create Wallet with invalid wallet type": {
+        "min": 361,
+        "max": 361,
+        "median": 361,
+        "p95": 361,
+        "p99": 361
+      },
+      "Create Wallet with integer wallet type": {
+        "min": 602,
+        "max": 602,
+        "median": 602,
+        "p95": 602,
+        "p99": 602
+      },
+      "Create Wallet with integer and float wallet type": {
+        "min": 352,
+        "max": 352,
+        "median": 352,
+        "p95": 352,
+        "p99": 352
+      },
+      "Create Wallet with invalid registration id and wallet type": {
+        "min": 725,
+        "max": 725,
+        "median": 725,
+        "p95": 725,
+        "p99": 725
+      },
+      "Create Wallet with invalid url 1": {
+        "min": 375,
+        "max": 375,
+        "median": 375,
+        "p95": 375,
+        "p99": 375
+      },
+      "Create Wallet with invalid url 2": {
+        "min": 355,
+        "max": 355,
+        "median": 355,
+        "p95": 355,
+        "p99": 355
+      },
+      "Update Balance": {
+        "min": 363,
+        "max": 363,
+        "median": 363,
+        "p95": 363,
+        "p99": 363
+      },
+      "Update Balance with a amount equals to zero": {
+        "min": 362,
+        "max": 362,
+        "median": 362,
+        "p95": 362,
+        "p99": 362
+      },
+      "Update Balance with alpha-numeric characters in amount field": {
+        "min": 371,
+        "max": 371,
+        "median": 371,
+        "p95": 371,
+        "p99": 371
+      },
+      "Update Balance without registration id": {
+        "min": 360,
+        "max": 360,
+        "median": 360,
+        "p95": 360,
+        "p99": 360
+      },
+      "Update Balance without wallet type": {
+        "min": 449,
+        "max": 449,
+        "median": 449,
+        "p95": 449,
+        "p99": 449
+      },
+      "Update Balance without registration id and wallet type": {
+        "min": 364,
+        "max": 364,
+        "median": 364,
+        "p95": 364,
+        "p99": 364
+      },
+      "Update Balance without registration id and wallet type and invalid amount": {
+        "min": 461,
+        "max": 461,
+        "median": 461,
+        "p95": 461,
+        "p99": 461
+      },
+      "Get Balance": {
+        "min": 559,
+        "max": 559,
+        "median": 559,
+        "p95": 559,
+        "p99": 559
+      },
+      "Get Balance without registration Id": {
+        "min": 373,
+        "max": 373,
+        "median": 373,
+        "p95": 373,
+        "p99": 373
+      },
+      "Get Balance without wallet type": {
+        "min": 467,
+        "max": 467,
+        "median": 467,
+        "p95": 467,
+        "p99": 467
+      }
+    },
+    "counters": {
+      "code 201 on Create Wallet": 1,
+      "code 422 on Create Wallet with same registration number": 1,
+      "code 422 on Create Wallet Registration Id as alphabets": 1,
+      "code 422 on Create Wallet with Registration Id as alpha numeric": 1,
+      "code 422 on Create Wallet with invalid wallet type": 1,
+      "code 422 on Create Wallet with integer wallet type": 1,
+      "code 422 on Create Wallet with integer and float wallet type": 1,
+      "code 422 on Create Wallet with invalid registration id and wallet type": 1,
+      "code 404 on Create Wallet with invalid url 1": 1,
+      "code 404 on Create Wallet with invalid url 2": 1,
+      "code 200 on Update Balance": 1,
+      "code 422 on Update Balance with a amount equals to zero": 1,
+      "code 422 on Update Balance with alpha-numeric characters in amount field": 1,
+      "code 422 on Update Balance without registration id": 1,
+      "code 422 on Update Balance without wallet type": 1,
+      "code 422 on Update Balance without registration id and wallet type": 1,
+      "code 422 on Update Balance without registration id and wallet type and invalid amount": 1,
+      "code 200 on Get Balance": 1,
+      "code 422 on Get Balance without registration Id": 1,
+      "code 422 on Get Balance without wallet type": 1
+    },
+    "scenariosAvoided": 0,
+    "phases": [
+      {
+        "duration": 1,
+        "arrivalRate": 1
+      }
+    ]
+  },
+  "intermediate": [
+    {
+      "timestamp": "2021-12-28T12:30:27.809Z",
+      "scenariosCreated": 1,
+      "scenariosCompleted": 1,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 307,
+        "max": 718,
+        "median": 368,
+        "p95": 657,
+        "p99": 718
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2.22
+      },
+      "scenarioDuration": {
+        "min": 8777.9,
+        "max": 8777.9,
+        "median": 8777.9,
+        "p95": 8777.9,
+        "p99": 8777.9
+      },
+      "scenarioCounts": {
+        "Create Wallet API positive and negative test": 1
+      },
+      "errors": {},
+      "codes": {
+        "200": 2,
+        "201": 1,
+        "404": 2,
+        "422": 15
+      },
+      "matches": 0,
+      "latencies": [
+        307000000,
+        440000000,
+        365000000,
+        438000000,
+        355000000,
+        596000000,
+        347000000,
+        718000000,
+        371000000,
+        350000000,
+        359000000,
+        357000000,
+        367000000,
+        354000000,
+        444000000,
+        358000000,
+        451000000,
+        539000000,
+        369000000,
+        463000000
+      ],
+      "customStats": {
+        "Create Wallet": {
+          "min": 587,
+          "max": 587,
+          "median": 587,
+          "p95": 587,
+          "p99": 587
+        },
+        "Create Wallet with same registration number": {
+          "min": 449,
+          "max": 449,
+          "median": 449,
+          "p95": 449,
+          "p99": 449
+        },
+        "Create Wallet Registration Id as alphabets": {
+          "min": 371,
+          "max": 371,
+          "median": 371,
+          "p95": 371,
+          "p99": 371
+        },
+        "Create Wallet with Registration Id as alpha numeric": {
+          "min": 451,
+          "max": 451,
+          "median": 451,
+          "p95": 451,
+          "p99": 451
+        },
+        "Create Wallet with invalid wallet type": {
+          "min": 361,
+          "max": 361,
+          "median": 361,
+          "p95": 361,
+          "p99": 361
+        },
+        "Create Wallet with integer wallet type": {
+          "min": 602,
+          "max": 602,
+          "median": 602,
+          "p95": 602,
+          "p99": 602
+        },
+        "Create Wallet with integer and float wallet type": {
+          "min": 352,
+          "max": 352,
+          "median": 352,
+          "p95": 352,
+          "p99": 352
+        },
+        "Create Wallet with invalid registration id and wallet type": {
+          "min": 725,
+          "max": 725,
+          "median": 725,
+          "p95": 725,
+          "p99": 725
+        },
+        "Create Wallet with invalid url 1": {
+          "min": 375,
+          "max": 375,
+          "median": 375,
+          "p95": 375,
+          "p99": 375
+        },
+        "Create Wallet with invalid url 2": {
+          "min": 355,
+          "max": 355,
+          "median": 355,
+          "p95": 355,
+          "p99": 355
+        },
+        "Update Balance": {
+          "min": 363,
+          "max": 363,
+          "median": 363,
+          "p95": 363,
+          "p99": 363
+        },
+        "Update Balance with a amount equals to zero": {
+          "min": 362,
+          "max": 362,
+          "median": 362,
+          "p95": 362,
+          "p99": 362
+        },
+        "Update Balance with alpha-numeric characters in amount field": {
+          "min": 371,
+          "max": 371,
+          "median": 371,
+          "p95": 371,
+          "p99": 371
+        },
+        "Update Balance without registration id": {
+          "min": 360,
+          "max": 360,
+          "median": 360,
+          "p95": 360,
+          "p99": 360
+        },
+        "Update Balance without wallet type": {
+          "min": 449,
+          "max": 449,
+          "median": 449,
+          "p95": 449,
+          "p99": 449
+        },
+        "Update Balance without registration id and wallet type": {
+          "min": 364,
+          "max": 364,
+          "median": 364,
+          "p95": 364,
+          "p99": 364
+        },
+        "Update Balance without registration id and wallet type and invalid amount": {
+          "min": 461,
+          "max": 461,
+          "median": 461,
+          "p95": 461,
+          "p99": 461
+        },
+        "Get Balance": {
+          "min": 559,
+          "max": 559,
+          "median": 559,
+          "p95": 559,
+          "p99": 559
+        },
+        "Get Balance without registration Id": {
+          "min": 373,
+          "max": 373,
+          "median": 373,
+          "p95": 373,
+          "p99": 373
+        },
+        "Get Balance without wallet type": {
+          "min": 467,
+          "max": 467,
+          "median": 467,
+          "p95": 467,
+          "p99": 467
+        }
+      },
+      "counters": {
+        "code 201 on Create Wallet": 1,
+        "code 422 on Create Wallet with same registration number": 1,
+        "code 422 on Create Wallet Registration Id as alphabets": 1,
+        "code 422 on Create Wallet with Registration Id as alpha numeric": 1,
+        "code 422 on Create Wallet with invalid wallet type": 1,
+        "code 422 on Create Wallet with integer wallet type": 1,
+        "code 422 on Create Wallet with integer and float wallet type": 1,
+        "code 422 on Create Wallet with invalid registration id and wallet type": 1,
+        "code 404 on Create Wallet with invalid url 1": 1,
+        "code 404 on Create Wallet with invalid url 2": 1,
+        "code 200 on Update Balance": 1,
+        "code 422 on Update Balance with a amount equals to zero": 1,
+        "code 422 on Update Balance with alpha-numeric characters in amount field": 1,
+        "code 422 on Update Balance without registration id": 1,
+        "code 422 on Update Balance without wallet type": 1,
+        "code 422 on Update Balance without registration id and wallet type": 1,
+        "code 422 on Update Balance without registration id and wallet type and invalid amount": 1,
+        "code 200 on Get Balance": 1,
+        "code 422 on Get Balance without registration Id": 1,
+        "code 422 on Get Balance without wallet type": 1
+      },
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-12-28T12:30:27.812Z",
+      "scenariosCreated": 0,
+      "scenariosCompleted": 0,
+      "requestsCompleted": 0,
+      "latency": {
+        "min": null,
+        "max": null,
+        "median": null,
+        "p95": null,
+        "p99": null
+      },
+      "rps": {
+        "count": 0,
+        "mean": null
+      },
+      "scenarioDuration": {
+        "min": null,
+        "max": null,
+        "median": null,
+        "p95": null,
+        "p99": null
+      },
+      "scenarioCounts": {},
+      "errors": {},
+      "codes": {},
+      "matches": 0,
+      "latencies": [],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "aggregate": {
+    "timestamp": "2021-12-27T11:26:45.200Z",
+    "scenariosCreated": 1,
+    "scenariosCompleted": 1,
+    "requestsCompleted": 7,
+    "latency": {
+      "min": 288,
+      "max": 732,
+      "median": 351,
+      "p95": 732,
+      "p99": 732
+    },
+    "rps": {
+      "count": 7,
+      "mean": 2
+    },
+    "scenarioDuration": {
+      "min": 3375.3,
+      "max": 3375.3,
+      "median": 3375.3,
+      "p95": 3375.3,
+      "p99": 3375.3
+    },
+    "scenarioCounts": {
+      "Address API positive and negative test": 1
+    },
+    "errors": {},
+    "codes": {
+      "200": 3,
+      "404": 3,
+      "422": 1
+    },
+    "matches": 0,
+    "customStats": {
+      "Verify Address with valid data": {
+        "min": 1017,
+        "max": 1017,
+        "median": 1017,
+        "p95": 1017,
+        "p99": 1017
+      },
+      "Verify Address without primary line in the address": {
+        "min": 677,
+        "max": 677,
+        "median": 677,
+        "p95": 677,
+        "p99": 677
+      },
+      "Verify Address with invalid url": {
+        "min": 355,
+        "max": 355,
+        "median": 355,
+        "p95": 355,
+        "p99": 355
+      },
+      "get service types": {
+        "min": 295,
+        "max": 295,
+        "median": 295,
+        "p95": 295,
+        "p99": 295
+      },
+      "get service types with invalid url": {
+        "min": 368,
+        "max": 368,
+        "median": 368,
+        "p95": 368,
+        "p99": 368
+      },
+      "System Pricing with valid url": {
+        "min": 304,
+        "max": 304,
+        "median": 304,
+        "p95": 304,
+        "p99": 304
+      },
+      "System Pricing with invalid url": {
+        "min": 346,
+        "max": 346,
+        "median": 346,
+        "p95": 346,
+        "p99": 346
+      }
+    },
+    "counters": {
+      "code 200 on Verify Address with valid data": 1,
+      "code 422 on Verify Address without primary line in the address": 1,
+      "code 404 on Verify Address with invalid url": 1,
+      "code 200 on get service types": 1,
+      "code 404 on get service types with invalid url": 1,
+      "code 200 on System Pricing with valid url": 1,
+      "code 404 on System Pricing with invalid url": 1
+    },
+    "scenariosAvoided": 0,
+    "phases": [
+      {
+        "duration": 1,
+        "arrivalRate": 1
+      }
+    ]
+  },
+  "intermediate": [
+    {
+      "timestamp": "2021-12-27T11:26:45.196Z",
+      "scenariosCreated": 1,
+      "scenariosCompleted": 1,
+      "requestsCompleted": 7,
+      "latency": {
+        "min": 288,
+        "max": 732,
+        "median": 351,
+        "p95": 732,
+        "p99": 732
+      },
+      "rps": {
+        "count": 7,
+        "mean": 2.01
+      },
+      "scenarioDuration": {
+        "min": 3375.3,
+        "max": 3375.3,
+        "median": 3375.3,
+        "p95": 3375.3,
+        "p99": 3375.3
+      },
+      "scenarioCounts": {
+        "Address API positive and negative test": 1
+      },
+      "errors": {},
+      "codes": {
+        "200": 3,
+        "404": 3,
+        "422": 1
+      },
+      "matches": 0,
+      "latencies": [
+        732000000,
+        668000000,
+        351000000,
+        288000000,
+        359000000,
+        301000000,
+        341000000
+      ],
+      "customStats": {
+        "Verify Address with valid data": {
+          "min": 1017,
+          "max": 1017,
+          "median": 1017,
+          "p95": 1017,
+          "p99": 1017
+        },
+        "Verify Address without primary line in the address": {
+          "min": 677,
+          "max": 677,
+          "median": 677,
+          "p95": 677,
+          "p99": 677
+        },
+        "Verify Address with invalid url": {
+          "min": 355,
+          "max": 355,
+          "median": 355,
+          "p95": 355,
+          "p99": 355
+        },
+        "get service types": {
+          "min": 295,
+          "max": 295,
+          "median": 295,
+          "p95": 295,
+          "p99": 295
+        },
+        "get service types with invalid url": {
+          "min": 368,
+          "max": 368,
+          "median": 368,
+          "p95": 368,
+          "p99": 368
+        },
+        "System Pricing with valid url": {
+          "min": 304,
+          "max": 304,
+          "median": 304,
+          "p95": 304,
+          "p99": 304
+        },
+        "System Pricing with invalid url": {
+          "min": 346,
+          "max": 346,
+          "median": 346,
+          "p95": 346,
+          "p99": 346
+        }
+      },
+      "counters": {
+        "code 200 on Verify Address with valid data": 1,
+        "code 422 on Verify Address without primary line in the address": 1,
+        "code 404 on Verify Address with invalid url": 1,
+        "code 200 on get service types": 1,
+        "code 404 on get service types with invalid url": 1,
+        "code 200 on System Pricing with valid url": 1,
+        "code 404 on System Pricing with invalid url": 1
+      },
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    }
+  ]
+}
